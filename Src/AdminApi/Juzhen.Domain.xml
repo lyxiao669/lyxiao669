@@ -1,0 +1,388 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Juzhen.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:Juzhen.Domain.Aggregates.Achievement">
+            <summary>
+            成绩结果
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.Achievement.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.Achievement.Mark">
+            <summary>
+            分数
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.Achievement.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.Achievement.Number">
+            <summary>
+            第几次答题
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.Achievement.CreateTime">
+            <summary>
+            提交时间
+            </summary>
+        </member>
+        <member name="T:Juzhen.Domain.Aggregates.AnswerResultRecord">
+            <summary>
+            用户答题记录
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.AnswerResultRecord.Timestamp">
+            <summary>
+            并发控制
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.AnswerResultRecord.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.AnswerResultRecord.QuestionId">
+            <summary>
+            问题Id
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.AnswerResultRecord.QuestionOption">
+            <summary>
+            选择的问题选项
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.AnswerResultRecord.IsTrue">
+            <summary>
+            是否正确
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.AnswerResultRecord.Number">
+            <summary>
+            第几次答题
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.AnswerResultRecord.CreateTime">
+            <summary>
+            答题时间
+            </summary>
+        </member>
+        <member name="T:Juzhen.Domain.Aggregates.Banner">
+            <summary>
+            轮播图
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.Banner.Timestamp">
+            <summary>
+            并发控制
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.Banner.Img">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.Banner.Sort">
+            <summary>
+            顺序
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.Banner.CreateTime">
+            <summary>
+            添加时间
+            </summary>
+        </member>
+        <member name="T:Juzhen.Domain.Aggregates.IdentityUser">
+            <summary>
+            用户表
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.IdentityUser.Timestamp">
+            <summary>
+            并发控制
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.IdentityUser.FullName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.IdentityUser.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.IdentityUser.School">
+            <summary>
+            学校
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.IdentityUser.Grade">
+            <summary>
+            年级
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.IdentityUser.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.IdentityUser.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.IdentityUser.QRCode">
+            <summary>
+            二维码
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.IdentityUser.QrCodeImg">
+            <summary>
+            二维码图片
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.IdentityUser.IsQrCode">
+            <summary>
+            是否生成二维码图片
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.IdentityUser.Photo">
+            <summary>
+            照片
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.IdentityUser.CompositePhoto">
+            <summary>
+            合成照片
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.IdentityUser.IsPhoto">
+            <summary>
+            是否拍过
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.IdentityUser.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.IdentityUser.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="M:Juzhen.Domain.Aggregates.IdentityUser.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            导入学生数据
+            </summary>
+            <param name="fullName"></param>
+            <param name="mobile"></param>
+            <param name="school"></param>
+            <param name="grade"></param>
+            <param name="age"></param>
+            <param name="gender"></param>
+        </member>
+        <member name="M:Juzhen.Domain.Aggregates.IdentityUser.Update(System.String)">
+            <summary>
+            生成二维码
+            </summary>
+            <param name="qRCode"></param>
+        </member>
+        <member name="M:Juzhen.Domain.Aggregates.IdentityUser.AddQrCodeImg(System.String)">
+            <summary>
+            生成二维码图片
+            </summary>
+            <param name="qrCodeImg"></param>
+        </member>
+        <member name="M:Juzhen.Domain.Aggregates.IdentityUser.GeneratePhotos(System.String)">
+            <summary>
+            拍照片
+            </summary>
+            <param name="photo"></param>
+        </member>
+        <member name="M:Juzhen.Domain.Aggregates.IdentityUser.CompositePhotos(System.String)">
+            <summary>
+            合成照片
+            </summary>
+            <param name="compositePhoto"></param>
+        </member>
+        <member name="T:Juzhen.Domain.Aggregates.Question">
+            <summary>
+            题库问题
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.Question.Timestamp">
+            <summary>
+            并发控制
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.Question.Problem">
+            <summary>
+            问题
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.Question.Img">
+            <summary>
+            展示图片
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.Question.AnswerAnalysis">
+            <summary>
+            答案解析
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.Question.Type">
+            <summary>
+            问题类型
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.Question.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Juzhen.Domain.Aggregates.QuestionBank">
+            <summary>
+            题库问题
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.QuestionBank.Title">
+            <summary>
+            题库标题
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.QuestionBank.Grade">
+            <summary>
+            年级
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.QuestionBank.TimeLimit">
+            <summary>
+            时间限制
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.QuestionBank.Amount">
+            <summary>
+            题目数量
+            </summary>
+        </member>
+        <member name="T:Juzhen.Domain.Aggregates.QuestionOptions">
+            <summary>
+            问题选项
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.QuestionOptions.Timestamp">
+            <summary>
+            并发控制
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.QuestionOptions.QuestionId">
+            <summary>
+            题库问题Id
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.QuestionOptions.Option">
+            <summary>
+            选项
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.QuestionOptions.OptionsAnswer">
+            <summary>
+            选项答案内容
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.QuestionOptions.IsAnswer">
+            <summary>
+            是否是正确答案
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.QuestionOptions.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Juzhen.Domain.Aggregates.Users">
+            <summary>
+            轮播图
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.Users.Timestamp">
+            <summary>
+            并发控制
+            </summary>
+        </member>
+        <member name="T:Juzhen.Domain.Aggregates.UserVsion">
+            <summary>
+            用户视力
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.UserVsion.FullName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.UserVsion.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.UserVsion.LeftEyeVision">
+            <summary>
+            左眼视力
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.UserVsion.RightEyeVision">
+            <summary>
+            右眼视力
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.UserVsion.LeftEyeAstigmatism">
+            <summary>
+            左眼散光
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.UserVsion.RightEyeAstigmatism">
+            <summary>
+            右眼散光
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.UserVsion.LeftEyePupilDistance">
+            <summary>
+            左眼瞳距
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.UserVsion.RightEyePupilDistance">
+            <summary>
+            右眼瞳距
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.UserVsion.LeftEyeAxial">
+            <summary>
+            左眼轴向
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.UserVsion.RightEyeAxial">
+            <summary>
+            右眼轴向
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.UserVsion.DoctorAdvice">
+            <summary>
+            医生建议
+            </summary>
+        </member>
+        <member name="P:Juzhen.Domain.Aggregates.UserVsion.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+    </members>
+</doc>

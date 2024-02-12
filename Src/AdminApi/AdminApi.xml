@@ -1,0 +1,1542 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AdminApi</name>
+    </assembly>
+    <members>
+        <member name="P:AdminApi.Application.CreateBannerCommand.Img">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateBannerCommand.Sort">
+            <summary>
+            顺序
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.DeleteBannerCommand.Img">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateBannerCommand.Img">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateBannerCommand.Sort">
+            <summary>
+            顺序
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateIdentityUserCommand.FullName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateIdentityUserCommand.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateIdentityUserCommand.School">
+            <summary>
+            学校
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateIdentityUserCommand.Grade">
+            <summary>
+            年级
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateIdentityUserCommand.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateIdentityUserCommand.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.ExcelImportIdentityUserCommand.FilePath">
+            <summary>
+            文件地址
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateIdentityUserCommand.FullName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateIdentityUserCommand.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateIdentityUserCommand.School">
+            <summary>
+            学校
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateIdentityUserCommand.Grade">
+            <summary>
+            年级
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateIdentityUserCommand.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateIdentityUserCommand.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateQuestionCommand.Problem">
+            <summary>
+            问题
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateQuestionCommand.Type">
+            <summary>
+            问题类型
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateQuestionCommand.Img">
+            <summary>
+            展示图片
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateQuestionCommand.AnswerAnalysis">
+            <summary>
+            答案解析
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateQuestionCommand.Problem">
+            <summary>
+            问题
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateQuestionCommand.Type">
+            <summary>
+            问题类型
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateQuestionCommand.Img">
+            <summary>
+            展示图片
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateQuestionCommand.AnswerAnalysis">
+            <summary>
+            答案解析
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateQuestionBankCommand.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateQuestionBankCommand.Grade">
+            <summary>
+            年级
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateQuestionBankCommand.TimeLimit">
+            <summary>
+            时间限制
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateQuestionBankCommand.Amount">
+            <summary>
+            题目数量
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateQuestionBankCommand.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateQuestionBankCommand.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateQuestionBankCommand.Grade">
+            <summary>
+            年级
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateQuestionBankCommand.TimeLimit">
+            <summary>
+            时间限制
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateQuestionBankCommand.Amount">
+            <summary>
+            题目数量
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateQuestionOptionsCommand.QuestionId">
+            <summary>
+            问题Id
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateQuestionOptionsCommand.Option">
+            <summary>
+            选项
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateQuestionOptionsCommand.OptionsAnswer">
+            <summary>
+            选项答案内容
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateQuestionOptionsCommand.IsAnswer">
+            <summary>
+            是否答案
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateQuestionOptionsCommand.Id">
+            <summary>
+            选项Id
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateQuestionOptionsCommand.Option">
+            <summary>
+            选项
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateQuestionOptionsCommand.OptionsAnswer">
+            <summary>
+            选项答案内容
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateQuestionOptionsCommand.IsAnswer">
+            <summary>
+            是否是答案
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateUserVsionCommand.FullName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateUserVsionCommand.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateUserVsionCommand.LeftEyeVision">
+            <summary>
+            左眼视力
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateUserVsionCommand.RightEyeVision">
+            <summary>
+            右眼视力
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateUserVsionCommand.LeftEyeAstigmatism">
+            <summary>
+            左眼散光
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateUserVsionCommand.RightEyeAstigmatism">
+            <summary>
+            右眼散光
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateUserVsionCommand.LeftEyePupilDistance">
+            <summary>
+            左眼瞳距
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateUserVsionCommand.RightEyePupilDistance">
+            <summary>
+            右眼瞳距
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateUserVsionCommand.LeftEyeAxial">
+            <summary>
+            左眼轴向
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateUserVsionCommand.RightEyeAxial">
+            <summary>
+            右眼轴向
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.CreateUserVsionCommand.DoctorAdvice">
+            <summary>
+            医生建议
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.ExcelImportUserVsionCommand.FilePath">
+            <summary>
+            文件地址
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateUserVsionCommand.FullName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateUserVsionCommand.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateUserVsionCommand.LeftEyeVision">
+            <summary>
+            左眼视力
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateUserVsionCommand.RightEyeVision">
+            <summary>
+            右眼视力
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateUserVsionCommand.LeftEyeAstigmatism">
+            <summary>
+            左眼散光
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateUserVsionCommand.RightEyeAstigmatism">
+            <summary>
+            右眼散光
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateUserVsionCommand.LeftEyePupilDistance">
+            <summary>
+            左眼瞳距
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateUserVsionCommand.RightEyePupilDistance">
+            <summary>
+            右眼瞳距
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateUserVsionCommand.LeftEyeAxial">
+            <summary>
+            左眼轴向
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateUserVsionCommand.RightEyeAxial">
+            <summary>
+            右眼轴向
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UpdateUserVsionCommand.DoctorAdvice">
+            <summary>
+            医生建议
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.AchievementModel.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.IdentityUserModel.FullName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.IdentityUserModel.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.IdentityUserModel.School">
+            <summary>
+            学校
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.IdentityUserModel.Grade">
+            <summary>
+            年级
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.QrCodeModel.School">
+            <summary>
+            学校
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.QrCodeModel.Grade">
+            <summary>
+            年级
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.QuestionModel.KeyWord">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.QuestionOptionModel.QuestionId">
+            <summary>
+            问题Id
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UserVsionModel.FullName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.UserVsionModel.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="M:AdminApi.Application.AchievementQueries.GetAchievementListAsync(AdminApi.Application.AchievementModel)">
+            <summary>
+            成绩列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Application.Queries.UserVsionQueries.GetUserVsionListAsync(AdminApi.Application.UserVsionModel)">
+            <summary>
+            用户视力列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AdminApi.Application.QrCodeQueries">
+            <summary>
+            导出二维码图片压缩包
+            </summary>
+        </member>
+        <member name="M:AdminApi.Application.QuestionBankQueries.GetQuestionBankDetailAsync(System.Int32)">
+            <summary>
+            题库详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Application.QuestionBankQueries.GetQuestionBankListAsync(AdminApi.Application.PageModel)">
+            <summary>
+            题库问题
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Application.QuestionOptionQueries.GetQuestionOptionDetailAsync(System.Int32)">
+            <summary>
+            问题选项详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Application.QuestionOptionQueries.GetQuestionOptionListAsync(AdminApi.Application.QuestionOptionModel)">
+            <summary>
+            问题选项列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Application.QuestionQueries.GetQuestionListAsync(AdminApi.Application.QuestionModel)">
+            <summary>
+            问题列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Application.QuestionQueries.GetQuestionDetailAsync(System.Int32)">
+            <summary>
+            问题详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Application.StudentUserQueries.GetIdentityUserDetailAsync(System.Int32)">
+            <summary>
+            学生详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Application.StudentUserQueries.GetIdentityUserListAsync(AdminApi.Application.IdentityUserModel)">
+            <summary>
+            学生列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Application.StudentUserQueries.GetStudentGradeListAsync">
+            <summary>
+            学生年级列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:AdminApi.Application.QuestionResult.Problem">
+            <summary>
+            问题
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.QuestionResult.Type">
+            <summary>
+            问题类型
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.QuestionResult.Options">
+            <summary>
+            问题选项
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.StudentQrCodeResult.IdentityUserDto.FullName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:AdminApi.Application.StudentQrCodeResult.IdentityUserDto.QRcode">
+            <summary>
+            二维码
+            </summary>
+        </member>
+        <member name="T:AdminApi.Controllers.AchievementsController">
+            <summary>
+            用户成绩记录
+            </summary>
+        </member>
+        <member name="M:AdminApi.Controllers.AchievementsController.Get(AdminApi.Application.AchievementModel)">
+            <summary>
+            成绩记录列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AdminApi.Controllers.BannersController">
+            <summary>
+            轮播图
+            </summary>
+        </member>
+        <member name="M:AdminApi.Controllers.BannersController.Post(AdminApi.Application.CreateBannerCommand)">
+            <summary>
+            新增轮播图
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.BannersController.Update(AdminApi.Application.UpdateBannerCommand)">
+            <summary>
+            修改轮播图
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.BannersController.Get(AdminApi.Application.PageModel)">
+            <summary>
+            查询轮播图列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.BannersController.Delete(System.Int32)">
+            <summary>
+            删除轮播图
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AdminApi.Controllers.QuestionBanksController">
+            <summary>
+            题库配置
+            </summary>
+        </member>
+        <member name="M:AdminApi.Controllers.QuestionBanksController.Get(System.Int32)">
+            <summary>
+            题库配置详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.QuestionBanksController.Get(AdminApi.Application.AchievementModel)">
+            <summary>
+            题库配置列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.QuestionBanksController.Post(AdminApi.Application.CreateQuestionBankCommand)">
+            <summary>
+            添加题库配置
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.QuestionBanksController.Update(AdminApi.Application.UpdateQuestionBankCommand)">
+            <summary>
+            修改题库配置
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.QuestionBanksController.Delete(System.Int32)">
+            <summary>
+            删除题库配置
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AdminApi.Controllers.QuestionOptionsController">
+            <summary>
+            问题选项
+            </summary>
+        </member>
+        <member name="M:AdminApi.Controllers.QuestionOptionsController.Get(System.Int32)">
+            <summary>
+            问题选项详情
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.QuestionOptionsController.Get(AdminApi.Application.QuestionOptionModel)">
+            <summary>
+            问题选项列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.QuestionOptionsController.Post(AdminApi.Application.CreateQuestionOptionsCommand)">
+            <summary>
+            添加问题选项
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.QuestionOptionsController.Update(AdminApi.Application.UpdateQuestionOptionsCommand)">
+            <summary>
+            修改问题选项
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.QuestionOptionsController.Delete(System.Int32)">
+            <summary>
+            删除问题选项
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AdminApi.Controllers.QuestionsController">
+            <summary>
+            问题
+            </summary>
+        </member>
+        <member name="M:AdminApi.Controllers.QuestionsController.Get(System.Int32)">
+            <summary>
+            问题详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.QuestionsController.Get(AdminApi.Application.QuestionModel)">
+            <summary>
+            问题列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.QuestionsController.Post(AdminApi.Application.CreateQuestionCommand)">
+            <summary>
+            添加问题
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.QuestionsController.Update(AdminApi.Application.UpdateQuestionCommand)">
+            <summary>
+            修改问题
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.QuestionsController.Delete(System.Int32)">
+            <summary>
+            删除问题
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AdminApi.Controllers.StudentUsersController">
+            <summary>
+            学生用户模块
+            </summary>
+        </member>
+        <member name="M:AdminApi.Controllers.StudentUsersController.Get(System.Int32)">
+            <summary>
+            学生详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.StudentUsersController.Get">
+            <summary>
+            学生年级列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.StudentUsersController.Get(AdminApi.Application.IdentityUserModel)">
+            <summary>
+            学生列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.StudentUsersController.Post(AdminApi.Application.ExcelImportIdentityUserCommand)">
+            <summary>
+            excel导入学生
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.StudentUsersController.Post(AdminApi.Application.CreateIdentityUserCommand)">
+            <summary>
+            添加学生
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.StudentUsersController.Put(AdminApi.Application.UpdateIdentityUserCommand)">
+            <summary>
+            修改学生
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.StudentUsersController.Delete(System.Int32)">
+            <summary>
+            删除学生
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AdminApi.Controllers.UploadController">
+            <summary>
+            上传统一接口
+            </summary>
+        </member>
+        <member name="M:AdminApi.Controllers.UploadController.GetQiniuUploadToken">
+            <summary>
+            七牛云
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.UploadController.Upload(Juzhen.Infrastructur.ImgUtil.UploadModel)">
+            <summary>
+            本地
+            </summary>
+            <param name="req"></param>
+        </member>
+        <member name="T:AdminApi.Controllers.UsersController">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="M:AdminApi.Controllers.UsersController.Post(AdminApi.Application.CreateUsersCommand)">
+            <summary>
+            新增用户
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.UsersController.Update(AdminApi.Application.UpdateUsersCommand)">
+            <summary>
+            修改用户
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.UsersController.Get(AdminApi.Application.PageModel)">
+            <summary>
+            查询用户列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AdminApi.Controllers.UserVsionsController">
+            <summary>
+            学生视力信息
+            </summary>
+        </member>
+        <member name="M:AdminApi.Controllers.UserVsionsController.Get(AdminApi.Application.UserVsionModel)">
+            <summary>
+            学生视力信息列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.UserVsionsController.Post(AdminApi.Application.ExcelImportUserVsionCommand)">
+            <summary>
+            excel导入学生视力信息
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.UserVsionsController.Post(AdminApi.Application.CreateUserVsionCommand)">
+            <summary>
+            添加学生视力信息
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.UserVsionsController.Put(AdminApi.Application.UpdateUserVsionCommand)">
+            <summary>
+            修改学生视力信息
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.UserVsionsController.Delete(System.Int32)">
+            <summary>
+            删除学生视力信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.IServiceCollectionExtensions.AddApplicationRepositories(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            注册所有仓储
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.IServiceCollectionExtensions.AddApplicationQueries(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            注册所有查询
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.IServiceCollectionExtensions.AddApiServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            注册第三方api服务
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IdentityUI.API.Controllers.IdentityUserController">
+            <summary>
+            后台用户
+            </summary>
+        </member>
+        <member name="M:IdentityUI.API.Controllers.IdentityUserController.UpdateRole(IdentityUI.API.Controllers.UpdateUserRoleModel)">
+            <summary>
+            修改用户基本信息，权限
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityUI.API.Controllers.IdentityUserController.CreateUser(IdentityUI.API.Controllers.CreateUserModel)">
+            <summary>
+            新增用户
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityUI.API.Controllers.IdentityUserController.Login(IdentityUI.API.Controllers.LoginModel)">
+            <summary>
+            登录
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityUI.API.Controllers.IdentityUserController.UserInfo">
+            <summary>
+            获取用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityUI.API.Controllers.IdentityUserController.UpdatePassWord(IdentityUI.API.Controllers.UpdatePassWordModel)">
+            <summary>
+            修改密码
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityUI.API.Controllers.IdentityUserController.Delete(System.Int32)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Juzhen.Admin.HttpApi.Controllers.QrCodesController">
+            <summary>
+            合成二维码图片
+            </summary>
+        </member>
+        <member name="M:Juzhen.Admin.HttpApi.Controllers.QrCodesController.Get(AdminApi.Application.QrCodeModel)">
+            <summary>
+            导出二维码图片压缩包
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructure.IdWorker.#ctor(System.Int64)">
+            <summary>
+            机器码
+            </summary>
+            <param name="workerId"></param>
+        </member>
+        <member name="M:Juzhen.Infrastructure.IdWorker.TillNextMillis(System.Int64)">
+            <summary>
+            获取下一微秒时间戳
+            </summary>
+            <param name="lastTimestamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructure.IdWorker.TimeStamp">
+            <summary>
+            生成当前时间戳
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructure.CalculateDistanceUtil.GetDistance(System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+            <summary>
+            计算两点位置的距离，返回两点的距离，单位 米
+            该公式为GOOGLE提供，误差小于0.2米
+            </summary>
+            <param name="lat1">第一点纬度</param>
+            <param name="lng1">第一点经度</param>
+            <param name="lat2">第二点纬度</param>
+            <param name="lng2">第二点经度</param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructure.CalculateDistanceUtil.Rad(System.Nullable{System.Decimal})">
+            <summary>
+            经纬度转化成弧度
+            </summary>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Juzhen.Infrastructure.ConvertUtil">
+            <summary>
+            数据转换工具类
+            </summary>
+        </member>
+        <member name="M:Juzhen.Infrastructure.ConvertUtil.ToJson(System.Object)">
+            <summary>
+            将对象转换成JSON字符串
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructure.ConvertUtil.FromJson``1(System.String)">
+            <summary>
+            将JSON字符串转换成指定模型
+            要求C#字段名首字母大小，js属性名首字母小写
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructure.ConvertUtil.FromJson``1(System.String,System.Func{``0})">
+            <summary>
+            将json反序列化成匿名类型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <param name="func"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructure.ConvertUtil.FromJson(System.String)">
+            <summary>
+            将JSON字符串转换成JSON对象
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructure.ConvertUtil.FromJsonObject(System.String)">
+            <summary>
+            将JSON字符串转换成JSON对象
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructure.ConvertUtil.FromJsonArray(System.String)">
+            <summary>
+            将JSON字符串转换成JSON数组
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructure.ConvertUtil.ToBase64(System.String)">
+            <summary>
+            转化成Base64字符串
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructure.ConvertUtil.FromBase64(System.String)">
+            <summary>
+            解析Base64字符
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructure.ConvertUtil.ToBytes(System.String,System.String)">
+            <summary>
+            转化成byte数组
+            </summary>
+            <param name="str"></param>
+            <param name="encoding">默认是UTF-8</param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructure.ConvertUtil.EncodingConvert(System.String,System.String,System.String)">
+            <summary>
+            将字符编码从一种转换成另一种
+            </summary>
+            <param name="str"></param>
+            <param name="srcEncoding"></param>
+            <param name="dstEncoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructure.ExcelUtil.Write(System.Data.DataTable)">
+            <summary>
+            将DataTable转化成HSSFWorkbook
+            </summary>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructure.ExcelUtil.WriteToFile(System.Data.DataTable,System.String)">
+            <summary>
+            保存到本地文件
+            </summary>
+            <param name="table"></param>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:Juzhen.Infrastructure.ExcelUtil.WriteToFile``1(System.Collections.Generic.List{``0},System.String)">
+            <summary>
+            保存到本地文件
+            </summary>
+            <param name="list"></param>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:Juzhen.Infrastructure.ExcelUtil.WriteToClient(System.IO.Stream,System.Data.DataTable)">
+            <summary>
+            响应到浏览器
+            </summary>
+            <param name="body"></param>
+            <param name="table"></param>
+        </member>
+        <member name="M:Juzhen.Infrastructure.ExcelUtil.WriteToClient``1(System.IO.Stream,System.Collections.Generic.List{``0})">
+            <summary>
+            响应到浏览器
+            </summary>
+            <param name="body"></param>
+            <param name="list"></param>
+        </member>
+        <member name="M:Juzhen.Infrastructure.ExcelUtil.Read(System.IO.Stream,System.String,System.Int32,System.Int32)">
+            <summary>
+            将Excel转化成HSSFWorkbook
+            </summary>
+            <param name="stream"></param>
+            <param name="extension"></param>
+            <param name="sheetAt">sheet下标</param>
+            <param name="startRow">开始行</param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructure.ExcelUtil.Read(System.String,System.Int32,System.Int32)">
+            <summary>
+            把excel文件转换成datatable
+            </summary>
+            <param name="filename"></param>
+            <param name="sheetAt"></param>
+            <param name="startRow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructure.ExcelUtil.ListToDataTable``1(System.Collections.Generic.List{``0})">
+            <summary>
+            List转DataTable
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Juzhen.Infrastructure.HttpUtil">
+            <summary>
+            通用的请求工具
+            </summary>
+        </member>
+        <member name="M:Juzhen.Infrastructure.HttpUtil.Post(Juzhen.Infrastructure.HttpItem)">
+            <summary>
+            发起请求
+            </summary>
+            <param name="item">请求选项</param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructure.HttpUtil.SetHttpItem(Juzhen.Infrastructure.HttpItem)">
+            <summary>
+            初始化请求选项
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Juzhen.Infrastructure.HttpUtil.CreateRequest(Juzhen.Infrastructure.HttpItem)">
+            <summary>
+            创建请求
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructure.HttpUtil.GetResult(System.Net.HttpWebRequest,Juzhen.Infrastructure.HttpItem)">
+            <summary>
+            获取响应结果
+            </summary>
+            <param name="request"></param>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Juzhen.Infrastructure.HttpResult">
+            <summary>
+            获取响应结果
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpResult.Document">
+            <summary>
+            响应文档
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpResult.Bytes">
+            <summary>
+            响应字节
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpResult.Exception">
+            <summary>
+            异常
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpResult.StatusCode">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpResult.Cookies">
+            <summary>
+            Cookie
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpResult.Headers">
+            <summary>
+            获取来自服务器的与此响应关联的标头。
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpResult.StatusDescription">
+            <summary>
+            状态描述
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpResult.CharacterSet">
+            <summary>
+            字符集
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpResult.ContentType">
+            <summary>
+            响应上下文类型
+            </summary>
+        </member>
+        <member name="T:Juzhen.Infrastructure.HttpItem">
+            <summary>
+            请求选项
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpItem.URL">
+            <summary>
+            Url:不能为空
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpItem.Method">
+            <summary>
+            POST/GET
+            Default:GET
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpItem.Data">
+            <summary>
+            请求参数
+            Type:string/FormData
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpItem.DataEncoding">
+            <summary>
+            请求参数字符编码
+            Default:UTF-8
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpItem.DocumentEncoding">
+            <summary>
+            响应文档字符编码
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpItem.Accept">
+            <summary>
+            获取或设置 Accept HTTP 标头的值。
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpItem.ContentType">
+            <summary>
+            请求上下文类型
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpItem.Connection">
+            <summary>
+            获取或设置 Connection HTTP 标头的值。
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpItem.Cookie">
+            <summary>
+            请求Cookie
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpItem.Host">
+            <summary>
+            获取或设置要在 HTTP 请求中独立于请求 URI 使用的 Host 标头值。
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpItem.KeepAlive">
+            <summary>
+            获取或设置一个值，该值指示是否与 Internet 资源建立持续型连接。
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpItem.Referer">
+            <summary>
+            获取或设置 Referer HTTP 标头的值。
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpItem.Timeout">
+            <summary>
+            获取或设置 System.Net.HttpWebRequest.GetResponse 和 System.Net.HttpWebRequest.GetRequestStream方法的超时值（以毫秒为单位）。
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpItem.UserAgent">
+            <summary>
+            获取或设置 User-agent HTTP 标头的值。
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpItem.AllowAutoRedirect">
+            <summary>
+            获取或设置一个值，该值指示请求是否应跟随重定向响应。
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpItem.Credentials">
+            <summary>
+            获取或设置请求的身份验证信息。
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructure.HttpItem.X509Certificate">
+            <summary>
+            获取或设置与此请求关联的安全证书
+            </summary>
+        </member>
+        <member name="T:Juzhen.Infrastructure.HttpForm">
+            <summary>
+            表单参数
+            </summary>
+        </member>
+        <member name="M:Juzhen.Infrastructure.NpoiExcelImportHelper.GetExcelType(System.IO.Stream,System.String)">
+            <summary>
+            获取文件类型
+            </summary>
+            <param name="stream"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructure.NpoiExcelImportHelper.GetDataTable(System.Int32,System.Data.DataTable,NPOI.SS.UserModel.IWorkbook)">
+            <summary>
+            获得DataTable
+            </summary>
+            <param name="startRow"></param>
+            <param name="table"></param>
+            <param name="workbook"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Juzhen.Infrastructure.ZipUtil">
+            <summary>
+            压缩本地文件
+            </summary>
+        </member>
+        <member name="T:Juzhen.Infrastructur.ImgUtil">
+            <summary>
+            合成图片工具
+            </summary>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.UploadLocalImg(Juzhen.Infrastructur.ImgUtil.UploadModel)">
+            <summary>
+            上传文件到本地
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.UploadQrCode(System.String,System.String)">
+            <summary>
+            生成二维码合成图片
+            </summary>
+            <param name="qrcode"></param>
+            /// <param name="fullName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.UploadImg(System.String,System.String,System.String)">
+            <summary>
+            两张图片合成
+            </summary>
+            <param name="img">需要合成进去的图</param>
+            <param name="backgroundImg">背景图</param>
+            <param name="photo">照片</param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.CreateQR(System.String,System.String)">
+            <summary>
+            合成二维码加文字图片
+            </summary>
+            <param name="nr">生成二维码字段</param>
+            <param name="fullName">文字内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.CreateImg(System.String,System.String,System.String)">
+            <summary>
+            几张图片合成
+            </summary>
+            <param name="img">需要合成进去的图</param>
+            <param name="backgroundImg">背景图</param>
+            <param name="photo">照片</param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.TextToBitmap(System.String,System.Drawing.Font)">
+            <summary>
+            把文字转换成Bitmap
+            </summary>
+            <param name="text"></param>
+            <param name="font"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.PictureAddText(System.String,System.String,System.String)">
+            <summary>
+            创建合成图片
+            </summary>
+            <param name="desc">文字内容</param>
+            <param name="background">背景图片</param>
+            <param name="qrCode">二维码</param>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.PictureAdd(System.String,System.String,System.String)">
+            <summary>
+            图片合成
+            </summary>
+            <param name="imgs">图片或者二维码</param>
+            <param name="background">背景图片</param>
+            <param name="photo">照片</param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.GetImageBytes(System.Drawing.Image)">
+            <summary>
+            图片装二进制流
+            </summary>
+            <param name="image"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.UpoladImage(Juzhen.Infrastructur.ImgUtil.UploadModel)">
+            <summary>
+            上传图片
+            </summary>
+        </member>
+        <member name="T:Juzhen.Infrastructur.ImgUtil.UploadModel">
+            <summary>
+            上传文件请求参数
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructur.ImgUtil.UploadModel.File">
+            <summary>
+            文件
+            </summary>
+        </member>
+        <member name="M:Juzhen.Qiniu.Infrastructure.QiniuUtil.GetUploadToken">
+            <summary>
+            获取凭证
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Mammothcode.Library.Web.NewHttpUtil">
+            <summary>
+            通用的请求工具
+            </summary>
+        </member>
+        <member name="M:Mammothcode.Library.Web.NewHttpUtil.Post(Mammothcode.Library.Web.HttpItem,System.String)">
+            <summary>
+            发起请求
+            </summary>
+            <param name="item">请求选项</param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mammothcode.Library.Web.NewHttpUtil.SetHttpItem(Mammothcode.Library.Web.HttpItem)">
+            <summary>
+            初始化请求选项
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Mammothcode.Library.Web.NewHttpUtil.CreateRequest(Mammothcode.Library.Web.HttpItem,System.String)">
+            <summary>
+            创建请求
+            </summary>
+            <param name="item"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mammothcode.Library.Web.NewHttpUtil.GetResult(System.Net.HttpWebRequest,Mammothcode.Library.Web.HttpItem)">
+            <summary>
+            获取响应结果
+            </summary>
+            <param name="request"></param>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Mammothcode.Library.Web.HttpResult">
+            <summary>
+            获取响应结果
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpResult.Document">
+            <summary>
+            响应文档
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpResult.Binary">
+            <summary>
+            响应字节
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpResult.Exception">
+            <summary>
+            异常
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpResult.StatusCode">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpResult.Cookies">
+            <summary>
+            Cookie
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpResult.Headers">
+            <summary>
+            获取来自服务器的与此响应关联的标头。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpResult.StatusDescription">
+            <summary>
+            状态描述
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpResult.CharacterSet">
+            <summary>
+            字符集
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpResult.ContentType">
+            <summary>
+            响应上下文类型
+            </summary>
+        </member>
+        <member name="T:Mammothcode.Library.Web.HttpItem">
+            <summary>
+            请求选项
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.URL">
+            <summary>
+            Url:不能为空
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.Method">
+            <summary>
+            POST/GET
+            Default:GET
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.Data">
+            <summary>
+            请求参数
+            Type:string/FormData
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.DataEncoding">
+            <summary>
+            请求参数字符编码
+            Default:UTF-8
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.DocumentEncoding">
+            <summary>
+            响应文档字符编码
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.Accept">
+            <summary>
+            获取或设置 Accept HTTP 标头的值。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.ContentType">
+            <summary>
+            请求上下文类型
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.Connection">
+            <summary>
+            获取或设置 Connection HTTP 标头的值。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.Cookie">
+            <summary>
+            请求Cookie
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.Host">
+            <summary>
+            获取或设置要在 HTTP 请求中独立于请求 URI 使用的 Host 标头值。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.KeepAlive">
+            <summary>
+            获取或设置一个值，该值指示是否与 Internet 资源建立持续型连接。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.Referer">
+            <summary>
+            获取或设置 Referer HTTP 标头的值。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.Timeout">
+            <summary>
+            获取或设置 System.Net.HttpWebRequest.GetResponse 和 System.Net.HttpWebRequest.GetRequestStream方法的超时值（以毫秒为单位）。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.UserAgent">
+            <summary>
+            获取或设置 User-agent HTTP 标头的值。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.AllowAutoRedirect">
+            <summary>
+            获取或设置一个值，该值指示请求是否应跟随重定向响应。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.Credentials">
+            <summary>
+            获取或设置请求的身份验证信息。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.X509Certificate">
+            <summary>
+            获取或设置与此请求关联的安全证书
+            </summary>
+        </member>
+        <member name="T:Mammothcode.Library.Web.FormData">
+            <summary>
+            表单参数
+            </summary>
+        </member>
+    </members>
+</doc>
