@@ -23,6 +23,7 @@ namespace Juzhen.Infrastructure
 
         public DbSet<UserVsion> UserVsions { get; set; }
         public DbSet<Users> Users { get; set; }
+        public DbSet<ScenicSpot> ScenicSpots { get; set; }
 
     }
     

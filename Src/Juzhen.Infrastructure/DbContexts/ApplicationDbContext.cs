@@ -1,4 +1,5 @@
-﻿using Juzhen.Domain.SeedWork;
+﻿using Juzhen.Domain.Aggregates;
+using Juzhen.Domain.SeedWork;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
@@ -11,6 +12,7 @@ namespace Juzhen.Infrastructure
 {
     public partial class ApplicationDbContext : DbContext, IUnitOfWork
     {
+       
         public IDbContextTransaction GetCurrentTransaction() => _currentTransaction;
 
         private IDbContextTransaction _currentTransaction;

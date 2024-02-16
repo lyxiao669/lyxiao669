@@ -21,7 +21,7 @@ namespace AdminApi.Application
         public async Task<bool> Handle(CreateUsersCommand request, CancellationToken cancellationToken)
         {
             var user = new Users(request.UserName, request.Password, request.Avatar);
-            _userRepository.Add(user);
+            _userRepository. Add(user);
             await _userRepository.UnitOfWork.SaveEntitiesAsync(cancellationToken);
             return true;
         }
