@@ -17,7 +17,7 @@ namespace AdminApi.Application.Queries
             _context = context;
         }
 
-        public async Task<PageResult<ScenicSpot>> GetScenicSpotsListAsync(PageModel model)
+        public async Task<PageResult<ScenicSpots>> GetScenicSpotsListAsync(PageModel model)
         {
             var query = _context.ScenicSpots;
             var list = await query

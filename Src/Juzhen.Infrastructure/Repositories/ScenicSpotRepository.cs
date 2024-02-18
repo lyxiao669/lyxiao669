@@ -17,22 +17,22 @@ namespace Juzhen.Infrastructure.Repositories
 
         public IUnitOfWork UnitOfWork => _context;
 
-        public void Add(ScenicSpot scenicSpot)
+        public void Add(ScenicSpots scenicSpot)
         {
             _context.Add(scenicSpot);
         }
 
-        public void Delete(ScenicSpot scenicSpot)
+        public void Delete(ScenicSpots scenicSpot)
         {
             _context.Remove(scenicSpot);
         }
 
-        public async Task<ScenicSpot> GetAsync(int id)
+        public async Task<ScenicSpots> GetAsync(int id)
         {
             return await _context.ScenicSpots.FindAsync(id);
         }
 
-        public void Update(ScenicSpot ScenicSpot)
+        public void Update(ScenicSpots ScenicSpot)
         {
             _context.Update(ScenicSpot);
         }

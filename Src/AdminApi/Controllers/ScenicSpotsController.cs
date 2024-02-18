@@ -1,55 +1,78 @@
-﻿using Juzhen.Domain.Aggregates;
-using Juzhen.Infrastructure.Repositories;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Net;
 using System.Threading.Tasks;
+using MediatR;
+using AdminApi.Application.Commands.ScenicSpotsAggregate;
+using AdminApi.Application;
+using Juzhen.Domain.Aggregates;
+using AdminApi.Application.Queries; 
 
-[Route("api/[controller]")]
-[ApiController]
-public class ScenicSpotsController : ControllerBase
+namespace AdminApi.Controllers
 {
-    private readonly IScenicSpotRepository _repository;
-
-    public ScenicSpotsController(IScenicSpotRepository repository)
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ScenicSpotsController : ControllerBase
     {
-        _repository = repository;
-    }
+        private readonly IMediator _mediator;
+        private readonly ScenicSpotQueries _scenicSpotsQueries;
 
-    [HttpPost]
-    public async Task<IActionResult> Create([FromBody] ScenicSpot scenicSpot)
-    {
-        scenicSpot.Id = 0; // 显式地设置为0，通常这是默认值，但这里是为了清晰说明
+        public ScenicSpotsController(ScenicSpotQueries scenicSpotsQueries, IMediator mediator)
+        {
+            _scenicSpotsQueries = scenicSpotsQueries;
+            _mediator = mediator;
+        }
 
-        var created = await _repository.AddAsync(scenicSpot);
-        return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
-    }
+        /// <summary>
+        /// 创建景区
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public async Task<ActionResult> Post(CreateScenicSpotCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (result)
+            {
+                return Ok();
+            }
+            return BadRequest();
+        }
 
-    [HttpGet("{id}")]
-    public async Task<IActionResult> GetById(int id)
-    {
-        var scenicSpot = await _repository.GetByIdAsync(id);
-        if (scenicSpot == null) return NotFound();
-        return Ok(scenicSpot);
-    }
+        [HttpPut]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public async Task<ActionResult> Update(UpdateScenicSpotCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (result)
+            {
+                return Ok();
+            }
+            return BadRequest();
+        }
 
-    [HttpGet]
-    public async Task<IActionResult> GetAll()
-    {
-        var scenicSpots = await _repository.GetAllAsync();
-        return Ok(scenicSpots);
-    }
+        [HttpGet]
+        [ProducesResponseType(typeof(PageResult<ScenicSpots>), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult> Get([FromQuery] PageModel model)
+        {
+            var data = await _scenicSpotsQueries.GetScenicSpotsListAsync(model);
+            return Ok(data);
+        }
 
-    [HttpPut("{id}")]
-    public async Task<IActionResult> Update(int id, [FromBody] ScenicSpot scenicSpot)
-    {
-        if (id != scenicSpot.Id) return BadRequest("ID mismatch");
-        await _repository.UpdateAsync(scenicSpot);
-        return NoContent();
-    }
-
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> Delete(int id)
-    {
-        await _repository.DeleteAsync(id);
-        return NoContent();
+        [HttpDelete("{id:int}")]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var command = new DeleteScenicSpotCommand { Id = id };
+            var result = await _mediator.Send(command);
+            if (result)
+            {
+                return Ok();
+            }
+            return BadRequest();
+        }
     }
 }
