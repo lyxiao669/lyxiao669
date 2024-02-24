@@ -1,4 +1,4 @@
-﻿using Juzhen.Infrastructure;
+﻿using Infrastructure;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using QRCoder;

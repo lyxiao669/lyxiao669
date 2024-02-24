@@ -3,7 +3,7 @@ using System.Net;
 using System.Threading.Tasks;
 using MediatR;
 using AdminApi.Application;
-using Juzhen.Domain.Aggregates;
+using Domain.Aggregates;
 using AdminApi.Application.Queries; // 请替换为实际的用户聚合命名空间
 
 namespace AdminApi.Controllers

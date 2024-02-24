@@ -1,0 +1,1141 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MiniApi</name>
+    </assembly>
+    <members>
+        <member name="P:MiniApi.Application.AnswerResultRecordVo.QuestionId">
+            <summary>
+            问题Id
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.AnswerResultRecordVo.QuestionOption">
+            <summary>
+            选择问题选项
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.ExamResult.Mark">
+            <summary>
+            分数
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.ExamResult.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.IdentiyUserModel.FullName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.IdentiyUserModel.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.QuestionModel.IsAll">
+            <summary>
+            false=最新,true=全部
+            </summary>
+        </member>
+        <member name="M:MiniApi.Application.Queries.AchievementQueries.GetAchievementAsync">
+            <summary>
+            用户成绩
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Application.IdentityUserQueries.Login(MiniApi.Application.IdentiyUserModel)">
+            <summary>
+            登录
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Application.IdentityUserQueries.GetUserInfo">
+            <summary>
+            获取用户详情
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Application.IdentityUserQueries.GetQrcodeUserInfo(System.String)">
+            <summary>
+            二维码获取用户Token
+            </summary>
+            <param name="qRCode">二维码</param>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Application.IdentityUserQueries.GetUserInfo(System.String)">
+            <summary>
+            二维码获取用户信息
+            </summary>
+            <param name="qRCode">二维码</param>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Application.PhotoQueries.GetPhotoListResultAsync(System.Int32)">
+            <summary>
+            照片墙
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Application.PhotoQueries.GetPhotoResultAsync(System.String)">
+            <summary>
+            自己的眼睛
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Application.QuestionQueries.GetTimeAsync">
+            <summary>
+            回答时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Application.QuestionQueries.GetQuestionListAsync">
+            <summary>
+            答题问题列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Application.QuestionQueries.GetQuestionListByQrCodeAsync(System.Int32)">
+            <summary>
+            扫码小程序答题问题列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Application.QuestionQueries.GetRecordResultListAsync(MiniApi.Application.QuestionModel)">
+            <summary>
+            用户答题记录列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Application.QuestionQueries.GetQuestionOptionResultAsync(System.Int32)">
+            <summary>
+            题目记录详情
+            </summary>
+            <param name="questionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Application.UserVsionQueries.GetUserVsionAsync">
+            <summary>
+            用户视力结果
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MiniApi.Application.AnswerResultRecordResultList.AnswerResultRecordDto.QuestionId">
+            <summary>
+            问题Id
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.AnswerResultRecordResultList.AnswerResultRecordDto.QuestionOption">
+            <summary>
+            选择问题选项
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.AnswerResultRecordResultList.AnswerResultRecordDto.IsTrue">
+            <summary>
+            是否答对
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.AnswerResultRecordResultList.AnswerResultRecordDto.CreateTime">
+            <summary>
+            答题时间
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.AnswerResultRecordResultList.AnswerResultRecordDto.Number">
+            <summary>
+            第几次答题
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.QuestionOptionResult.QuestionId">
+            <summary>
+            问题Id
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.QuestionOptionResult.Problem">
+            <summary>
+            问题标题
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.QuestionOptionResult.ResultOption">
+            <summary>
+            正确选项
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.RecordList.Mark">
+            <summary>
+            分数
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.RecordList.CreateTime">
+            <summary>
+            答题时间
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.AccessTokenResult.AccessToken">
+            <summary>
+            令牌
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.UserinfoResult.FullName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.UserinfoResult.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.UserinfoResult.School">
+            <summary>
+            学校
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.UserinfoResult.Grade">
+            <summary>
+            年级
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.UserinfoResult.QrCodeImg">
+            <summary>
+            二维码图片
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.UserinfoResult.Photo">
+            <summary>
+            照片
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.UserinfoResult.CompositePhoto">
+            <summary>
+            合成照片
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.UserinfoResult.IsPhoto">
+            <summary>
+            是否拍过照片
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.UserInformationResult.FullName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.UserInformationResult.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.UserInformationResult.Grade">
+            <summary>
+            年级
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.UserInformationResult.IsSee">
+            <summary>
+            是否使用机器看过
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.UserInformationResult.Photo">
+            <summary>
+            照片
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.UserInformationResult.CompositePhoto">
+            <summary>
+            合成照片
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.PhotoListResult.IdentityUserDto.Photo">
+            <summary>
+            照片
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.PhotoResult.Photo">
+            <summary>
+            照片
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.QuestionBankDetailResult.TimeLimit">
+            <summary>
+            时间限制
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.QuestionListResult.QuestionDto.Problem">
+            <summary>
+            问题
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.QuestionListResult.QuestionDto.Type">
+            <summary>
+            问题类型
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.QuestionListResult.QuestionDto.Img">
+            <summary>
+            展示图片
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.QuestionListResult.QuestionDto.AnswerAnalysis">
+            <summary>
+            答案解析
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.QuestionListResult.QuestionDto.Options">
+            <summary>
+            问题选项
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.QuestionOptionsDetailResult.Id">
+            <summary>
+            选项Id
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.QuestionOptionsDetailResult.Option">
+            <summary>
+            选项
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.QuestionOptionsDetailResult.OptionsAnswer">
+            <summary>
+            选项答案内容
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.QuestionOptionsDetailResult.IsAnswer">
+            <summary>
+            是否正确答案
+            </summary>
+        </member>
+        <member name="T:MiniApi.Application.IPhotoService">
+            <summary>
+            C:command，对外的功能（单一职责）
+            E:event,代码解耦合
+            Q:query,查询
+            R:Respository，存储
+            S:Service，公用的功能
+            </summary>
+        </member>
+        <member name="M:MiniApi.Application.IPhotoService.EnPhotoEnqueue(System.String)">
+            <summary>
+            照片队列
+            </summary>
+        </member>
+        <member name="M:MiniApi.Application.IPhotoService.Dequeue">
+            <summary>
+            移除的照片
+            </summary>
+        </member>
+        <member name="T:MiniApi.Controllers.AchievementsController">
+            <summary>
+            pc端答题显示分数
+            </summary>
+        </member>
+        <member name="M:MiniApi.Controllers.AchievementsController.Get">
+            <summary>
+            用户答题结果
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MiniApi.Controllers.BannersController">
+            <summary>
+            轮播图
+            </summary>
+        </member>
+        <member name="M:MiniApi.Controllers.BannersController.Get(MiniApi.Application.PageModel)">
+            <summary>
+            轮播图列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MiniApi.Controllers.IdentityUsersController">
+            <summary>
+            用户模块
+            </summary>
+        </member>
+        <member name="M:MiniApi.Controllers.IdentityUsersController.Login(MiniApi.Application.IdentiyUserModel)">
+            <summary>
+            小程序用户登录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Controllers.IdentityUsersController.Get(System.String)">
+            <summary>
+            扫码登录（扫码获取token）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Controllers.IdentityUsersController.Get">
+            <summary>
+            获取用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Controllers.PhotosController.Get(System.Int32)">
+            <summary>
+            照片墙
+            </summary>
+            <param name="number">照片墙上的照片数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Controllers.PhotosController.GetUserPhoto(System.String)">
+            <summary>
+            用户查看自己眼睛照片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Controllers.PhotosController.Post(MiniApi.Application.PhotoCommand)">
+            <summary>
+            猫眼拍照
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Controllers.QuestionsController.Get">
+            <summary>
+            登录进入答题
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Controllers.QuestionsController.GetTime">
+            <summary>
+            答题时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Controllers.QuestionsController.GetRecordResultListAsync(MiniApi.Application.QuestionModel)">
+            <summary>
+            小程序用户查看答题记录列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Controllers.QuestionsController.GetQuestionOptionResultAsync(System.Int32)">
+            <summary>
+            答题列表的问题记录详情
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Controllers.QuestionsController.Post(MiniApi.Application.ExamAnswerCommand)">
+            <summary>
+            用户答题
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MiniApi.Controllers.UserVsionsController">
+            <summary>
+            用户视力
+            </summary>
+        </member>
+        <member name="M:MiniApi.Controllers.UserVsionsController.Get">
+            <summary>
+            用户查看自己的视力结果数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Juzhen.RoadProgramApp.Controllers.UploadController">
+            <summary>
+            七牛云
+            </summary>
+        </member>
+        <member name="M:Juzhen.RoadProgramApp.Controllers.UploadController.GetQiniuUploadToken">
+            <summary>
+            七牛云token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.MiniProgramAPI.IServiceCollectionExtensions.AddApplicationRepositories(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            注册所有仓储
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.MiniProgramAPI.IServiceCollectionExtensions.AddApplicationQueries(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            注册所有查询
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.MiniProgramAPI.IServiceCollectionExtensions.AddMyAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            身份认证
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.MiniProgramAPI.Infrastructure.Utils.CalculateDistanceUtil.GetDistance(System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+            <summary>
+            计算两点位置的距离，返回两点的距离，单位 米
+            该公式为GOOGLE提供，误差小于0.2米
+            </summary>
+            <param name="lat1">第一点纬度</param>
+            <param name="lng1">第一点经度</param>
+            <param name="lat2">第二点纬度</param>
+            <param name="lng2">第二点经度</param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.MiniProgramAPI.Infrastructure.Utils.CalculateDistanceUtil.Rad(System.Nullable{System.Decimal})">
+            <summary>
+            经纬度转化成弧度
+            </summary>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.MiniProgramAPI.Infrastructure.Utils.ExcelUtil.Write(System.Data.DataTable)">
+            <summary>
+            将DataTable转化成HSSFWorkbook
+            </summary>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.MiniProgramAPI.Infrastructure.Utils.ExcelUtil.WriteToFile(System.Data.DataTable,System.String)">
+            <summary>
+            保存到本地文件
+            </summary>
+            <param name="table"></param>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:Juzhen.MiniProgramAPI.Infrastructure.Utils.ExcelUtil.WriteToFile``1(System.Collections.Generic.List{``0},System.String)">
+            <summary>
+            保存到本地文件
+            </summary>
+            <param name="list"></param>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:Juzhen.MiniProgramAPI.Infrastructure.Utils.ExcelUtil.WriteToClient(System.IO.Stream,System.Data.DataTable)">
+            <summary>
+            响应到浏览器
+            </summary>
+            <param name="body"></param>
+            <param name="table"></param>
+        </member>
+        <member name="M:Juzhen.MiniProgramAPI.Infrastructure.Utils.ExcelUtil.WriteToClient``1(System.IO.Stream,System.Collections.Generic.List{``0})">
+            <summary>
+            响应到浏览器
+            </summary>
+            <param name="body"></param>
+            <param name="list"></param>
+        </member>
+        <member name="M:Juzhen.MiniProgramAPI.Infrastructure.Utils.ExcelUtil.Read(System.IO.Stream,System.String,System.Int32,System.Int32)">
+            <summary>
+            将Excel转化成HSSFWorkbook
+            </summary>
+            <param name="stream"></param>
+            <param name="extension"></param> 
+            <param name="sheetAt">sheet下标</param>
+            <param name="startRow">开始行</param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.MiniProgramAPI.Infrastructure.Utils.ExcelUtil.Read(System.String,System.Int32,System.Int32)">
+            <summary>
+            把excel文件转换成datatable
+            </summary>
+            <param name="filename"></param>
+            <param name="sheetAt"></param>
+            <param name="startRow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.MiniProgramAPI.Infrastructure.Utils.ExcelUtil.ListToDataTable``1(System.Collections.Generic.List{``0})">
+            <summary>
+            List转DataTable
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Juzhen.MiniProgramAPI.YunPianUtil">
+            <summary>
+            云片短信验证
+            </summary>
+        </member>
+        <member name="T:Juzhen.Infrastructur.ImgUtil">
+            <summary>
+            合成图片工具
+            </summary>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.UploadLocalImg(Juzhen.Infrastructur.ImgUtil.UploadModel)">
+            <summary>
+            上传文件到本地
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.UploadQrCode(System.String,System.String)">
+            <summary>
+            生成二维码合成图片
+            </summary>
+            <param name="qrcode"></param>
+            /// <param name="fullName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.UploadImg(System.String,System.String,System.String)">
+            <summary>
+            两张图片合成
+            </summary>
+            <param name="img">需要合成进去的图</param>
+            <param name="backgroundImg">背景图</param>
+            <param name="photo">照片</param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.CreateQR(System.String,System.String)">
+            <summary>
+            合成二维码加文字图片
+            </summary>
+            <param name="nr">生成二维码字段</param>
+            <param name="fullName">文字内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.CreateImg(System.String,System.String,System.String)">
+            <summary>
+            几张图片合成
+            </summary>
+            <param name="img">需要合成进去的图</param>
+            <param name="backgroundImg">背景图</param>
+            <param name="photo">照片</param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.TextToBitmap(System.String,System.Drawing.Font)">
+            <summary>
+            把文字转换成Bitmap
+            </summary>
+            <param name="text"></param>
+            <param name="font"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.PictureAddText(System.String,System.String,System.String)">
+            <summary>
+            创建合成图片
+            </summary>
+            <param name="desc">文字内容</param>
+            <param name="background">背景图片</param>
+            <param name="qrCode">二维码</param>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.PictureAdd(System.String,System.String,System.String)">
+            <summary>
+            图片合成
+            </summary>
+            <param name="imgs">图片或者二维码</param>
+            <param name="background">背景图片</param>
+            <param name="photo">照片</param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.GetImageBytes(System.Drawing.Image)">
+            <summary>
+            图片装二进制流
+            </summary>
+            <param name="image"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.UpoladImage(Juzhen.Infrastructur.ImgUtil.UploadModel)">
+            <summary>
+            上传图片
+            </summary>
+        </member>
+        <member name="T:Juzhen.Infrastructur.ImgUtil.UploadModel">
+            <summary>
+            上传文件请求参数
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructur.ImgUtil.UploadModel.File">
+            <summary>
+            文件
+            </summary>
+        </member>
+        <member name="M:Juzhen.WaterTreatmentApi.Infrastructure.Utils.NpoiExcelImportHelper.GetExcelType(System.IO.Stream,System.String)">
+            <summary>
+            获取文件类型
+            </summary>
+            <param name="stream"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.WaterTreatmentApi.Infrastructure.Utils.NpoiExcelImportHelper.GetDataTable(System.Int32,System.Data.DataTable,NPOI.SS.UserModel.IWorkbook)">
+            <summary>
+            获得DataTable
+            </summary>
+            <param name="startRow"></param>
+            <param name="table"></param>
+            <param name="workbook"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Qiniu.Infrastructure.QiniuUtil.GetUploadToken">
+            <summary>
+            获取凭证
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Qiniu.Infrastructure.QiniuUtil.GetUploadFile(System.Byte[])">
+            <summary>
+            上传文件
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminAPI.Infrastructure.Services.IdWorker.#ctor(System.Int64)">
+            <summary>
+            机器码
+            </summary>
+            <param name="workerId"></param>
+        </member>
+        <member name="M:AdminAPI.Infrastructure.Services.IdWorker.TillNextMillis(System.Int64)">
+            <summary>
+            获取下一微秒时间戳
+            </summary>
+            <param name="lastTimestamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminAPI.Infrastructure.Services.IdWorker.TimeStamp">
+            <summary>
+            生成当前时间戳
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Mammothcode.Library.Data.ConvertUtil">
+            <summary>
+            数据转换工具类
+            </summary>
+        </member>
+        <member name="M:Mammothcode.Library.Data.ConvertUtil.ToJson(System.Object)">
+            <summary>
+            将对象转换成JSON字符串
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mammothcode.Library.Data.ConvertUtil.FromJson``1(System.String)">
+            <summary>
+            将JSON字符串转换成指定模型
+            要求C#字段名首字母大小，js属性名首字母小写
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mammothcode.Library.Data.ConvertUtil.FromJson``1(System.String,System.Func{``0})">
+            <summary>
+            将json反序列化成匿名类型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <param name="func"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mammothcode.Library.Data.ConvertUtil.FromJson(System.String)">
+            <summary>
+            将JSON字符串转换成JSON对象
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mammothcode.Library.Data.ConvertUtil.FromJsonObject(System.String)">
+            <summary>
+            将JSON字符串转换成JSON对象
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mammothcode.Library.Data.ConvertUtil.FromJsonArray(System.String)">
+            <summary>
+            将JSON字符串转换成JSON数组
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mammothcode.Library.Data.ConvertUtil.ToBase64(System.String)">
+            <summary>
+            转化成Base64字符串
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mammothcode.Library.Data.ConvertUtil.FromBase64(System.String)">
+            <summary>
+            解析Base64字符
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mammothcode.Library.Data.ConvertUtil.ToBytes(System.String,System.String)">
+            <summary>
+            转化成byte数组
+            </summary>
+            <param name="str"></param>
+            <param name="encoding">默认是UTF-8</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mammothcode.Library.Data.ConvertUtil.EncodingConvert(System.String,System.String,System.String)">
+            <summary>
+            将字符编码从一种转换成另一种
+            </summary>
+            <param name="str"></param>
+            <param name="srcEncoding"></param>
+            <param name="dstEncoding"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Mammothcode.Library.Web.NewHttpUtil">
+            <summary>
+            通用的请求工具
+            </summary>
+        </member>
+        <member name="M:Mammothcode.Library.Web.NewHttpUtil.Post(Mammothcode.Library.Web.HttpItem,System.String)">
+            <summary>
+            发起请求
+            </summary>
+            <param name="item">请求选项</param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mammothcode.Library.Web.NewHttpUtil.SetHttpItem(Mammothcode.Library.Web.HttpItem)">
+            <summary>
+            初始化请求选项
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Mammothcode.Library.Web.NewHttpUtil.CreateRequest(Mammothcode.Library.Web.HttpItem,System.String)">
+            <summary>
+            创建请求
+            </summary>
+            <param name="item"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mammothcode.Library.Web.NewHttpUtil.GetResult(System.Net.HttpWebRequest,Mammothcode.Library.Web.HttpItem)">
+            <summary>
+            获取响应结果
+            </summary>
+            <param name="request"></param>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Mammothcode.Library.Web.HttpResult">
+            <summary>
+            获取响应结果
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpResult.Document">
+            <summary>
+            响应文档
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpResult.Binary">
+            <summary>
+            响应字节
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpResult.Exception">
+            <summary>
+            异常
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpResult.StatusCode">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpResult.Cookies">
+            <summary>
+            Cookie
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpResult.Headers">
+            <summary>
+            获取来自服务器的与此响应关联的标头。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpResult.StatusDescription">
+            <summary>
+            状态描述
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpResult.CharacterSet">
+            <summary>
+            字符集
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpResult.ContentType">
+            <summary>
+            响应上下文类型
+            </summary>
+        </member>
+        <member name="T:Mammothcode.Library.Web.HttpItem">
+            <summary>
+            请求选项
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.URL">
+            <summary>
+            Url:不能为空
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.Method">
+            <summary>
+            POST/GET
+            Default:GET
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.Data">
+            <summary>
+            请求参数
+            Type:string/FormData
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.DataEncoding">
+            <summary>
+            请求参数字符编码
+            Default:UTF-8
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.DocumentEncoding">
+            <summary>
+            响应文档字符编码
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.Accept">
+            <summary>
+            获取或设置 Accept HTTP 标头的值。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.ContentType">
+            <summary>
+            请求上下文类型
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.Connection">
+            <summary>
+            获取或设置 Connection HTTP 标头的值。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.Cookie">
+            <summary>
+            请求Cookie
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.Host">
+            <summary>
+            获取或设置要在 HTTP 请求中独立于请求 URI 使用的 Host 标头值。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.KeepAlive">
+            <summary>
+            获取或设置一个值，该值指示是否与 Internet 资源建立持续型连接。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.Referer">
+            <summary>
+            获取或设置 Referer HTTP 标头的值。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.Timeout">
+            <summary>
+            获取或设置 System.Net.HttpWebRequest.GetResponse 和 System.Net.HttpWebRequest.GetRequestStream方法的超时值（以毫秒为单位）。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.UserAgent">
+            <summary>
+            获取或设置 User-agent HTTP 标头的值。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.AllowAutoRedirect">
+            <summary>
+            获取或设置一个值，该值指示请求是否应跟随重定向响应。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.Credentials">
+            <summary>
+            获取或设置请求的身份验证信息。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Library.Web.HttpItem.X509Certificate">
+            <summary>
+            获取或设置与此请求关联的安全证书
+            </summary>
+        </member>
+        <member name="T:Mammothcode.Library.Web.FormData">
+            <summary>
+            表单参数
+            </summary>
+        </member>
+        <member name="T:Mammothcode.Wechat.HttpUtil">
+            <summary>
+            通用的请求工具
+            </summary>
+        </member>
+        <member name="M:Mammothcode.Wechat.HttpUtil.Post(Mammothcode.Wechat.HttpItem)">
+            <summary>
+            发起请求
+            </summary>
+            <param name="item">请求选项</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mammothcode.Wechat.HttpUtil.SetHttpItem(Mammothcode.Wechat.HttpItem)">
+            <summary>
+            初始化请求选项
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Mammothcode.Wechat.HttpUtil.CreateRequest(Mammothcode.Wechat.HttpItem)">
+            <summary>
+            创建请求
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mammothcode.Wechat.HttpUtil.GetResult(System.Net.HttpWebRequest,Mammothcode.Wechat.HttpItem)">
+            <summary>
+            获取响应结果
+            </summary>
+            <param name="request"></param>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Mammothcode.Wechat.HttpResult">
+            <summary>
+            获取响应结果
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpResult.Document">
+            <summary>
+            响应文档
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpResult.Bytes">
+            <summary>
+            响应字节
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpResult.Exception">
+            <summary>
+            异常
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpResult.StatusCode">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpResult.Cookies">
+            <summary>
+            Cookie
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpResult.Headers">
+            <summary>
+            获取来自服务器的与此响应关联的标头。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpResult.StatusDescription">
+            <summary>
+            状态描述
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpResult.CharacterSet">
+            <summary>
+            字符集
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpResult.ContentType">
+            <summary>
+            响应上下文类型
+            </summary>
+        </member>
+        <member name="T:Mammothcode.Wechat.HttpItem">
+            <summary>
+            请求选项
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpItem.URL">
+            <summary>
+            Url:不能为空
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpItem.Method">
+            <summary>
+            POST/GET
+            Default:GET
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpItem.Data">
+            <summary>
+            请求参数
+            Type:string/FormData
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpItem.DataEncoding">
+            <summary>
+            请求参数字符编码
+            Default:UTF-8
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpItem.DocumentEncoding">
+            <summary>
+            响应文档字符编码
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpItem.Accept">
+            <summary>
+            获取或设置 Accept HTTP 标头的值。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpItem.ContentType">
+            <summary>
+            请求上下文类型
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpItem.Connection">
+            <summary>
+            获取或设置 Connection HTTP 标头的值。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpItem.Cookie">
+            <summary>
+            请求Cookie
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpItem.Host">
+            <summary>
+            获取或设置要在 HTTP 请求中独立于请求 URI 使用的 Host 标头值。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpItem.KeepAlive">
+            <summary>
+            获取或设置一个值，该值指示是否与 Internet 资源建立持续型连接。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpItem.Referer">
+            <summary>
+            获取或设置 Referer HTTP 标头的值。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpItem.Timeout">
+            <summary>
+            获取或设置 System.Net.HttpWebRequest.GetResponse 和 System.Net.HttpWebRequest.GetRequestStream方法的超时值（以毫秒为单位）。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpItem.UserAgent">
+            <summary>
+            获取或设置 User-agent HTTP 标头的值。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpItem.AllowAutoRedirect">
+            <summary>
+            获取或设置一个值，该值指示请求是否应跟随重定向响应。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpItem.Credentials">
+            <summary>
+            获取或设置请求的身份验证信息。
+            </summary>
+        </member>
+        <member name="P:Mammothcode.Wechat.HttpItem.X509Certificate">
+            <summary>
+            获取或设置与此请求关联的安全证书
+            </summary>
+        </member>
+        <member name="T:Mammothcode.Wechat.HttpForm">
+            <summary>
+            表单参数
+            </summary>
+        </member>
+    </members>
+</doc>

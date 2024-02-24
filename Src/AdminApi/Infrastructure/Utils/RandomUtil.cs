@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Juzhen.Infrastructure
+namespace Infrastructure
 {
 
 

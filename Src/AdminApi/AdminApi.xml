@@ -379,6 +379,11 @@
             问题Id
             </summary>
         </member>
+        <member name="P:AdminApi.Application.ScenicSpotModel.KeyWord">
+            <summary>
+            关键字
+            </summary>
+        </member>
         <member name="P:AdminApi.Application.UserVsionModel.FullName">
             <summary>
             姓名
@@ -659,6 +664,34 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:AdminApi.Controllers.ScenicSpotsController.Post(AdminApi.Application.Commands.ScenicSpotsAggregate.CreateScenicSpotCommand)">
+            <summary>
+            创建景区
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.ScenicSpotsController.Update(AdminApi.Application.Commands.ScenicSpotsAggregate.UpdateScenicSpotCommand)">
+            <summary>
+            更新景区信息
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.ScenicSpotsController.Get(AdminApi.Application.ScenicSpotModel)">
+            <summary>
+            获取景区列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.ScenicSpotsController.Delete(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="T:AdminApi.Controllers.StudentUsersController">
             <summary>
             学生用户模块
@@ -873,26 +906,26 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Juzhen.Infrastructure.IdWorker.#ctor(System.Int64)">
+        <member name="M:Infrastructure.IdWorker.#ctor(System.Int64)">
             <summary>
             机器码
             </summary>
             <param name="workerId"></param>
         </member>
-        <member name="M:Juzhen.Infrastructure.IdWorker.TillNextMillis(System.Int64)">
+        <member name="M:Infrastructure.IdWorker.TillNextMillis(System.Int64)">
             <summary>
             获取下一微秒时间戳
             </summary>
             <param name="lastTimestamp"></param>
             <returns></returns>
         </member>
-        <member name="M:Juzhen.Infrastructure.IdWorker.TimeStamp">
+        <member name="M:Infrastructure.IdWorker.TimeStamp">
             <summary>
             生成当前时间戳
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Juzhen.Infrastructure.CalculateDistanceUtil.GetDistance(System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+        <member name="M:Infrastructure.CalculateDistanceUtil.GetDistance(System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
             <summary>
             计算两点位置的距离，返回两点的距离，单位 米
             该公式为GOOGLE提供，误差小于0.2米
@@ -903,26 +936,26 @@
             <param name="lng2">第二点经度</param>
             <returns></returns>
         </member>
-        <member name="M:Juzhen.Infrastructure.CalculateDistanceUtil.Rad(System.Nullable{System.Decimal})">
+        <member name="M:Infrastructure.CalculateDistanceUtil.Rad(System.Nullable{System.Decimal})">
             <summary>
             经纬度转化成弧度
             </summary>
             <param name="d"></param>
             <returns></returns>
         </member>
-        <member name="T:Juzhen.Infrastructure.ConvertUtil">
+        <member name="T:Infrastructure.ConvertUtil">
             <summary>
             数据转换工具类
             </summary>
         </member>
-        <member name="M:Juzhen.Infrastructure.ConvertUtil.ToJson(System.Object)">
+        <member name="M:Infrastructure.ConvertUtil.ToJson(System.Object)">
             <summary>
             将对象转换成JSON字符串
             </summary>
             <param name="obj"></param>
             <returns></returns>
         </member>
-        <member name="M:Juzhen.Infrastructure.ConvertUtil.FromJson``1(System.String)">
+        <member name="M:Infrastructure.ConvertUtil.FromJson``1(System.String)">
             <summary>
             将JSON字符串转换成指定模型
             要求C#字段名首字母大小，js属性名首字母小写
@@ -931,7 +964,7 @@
             <param name="json"></param>
             <returns></returns>
         </member>
-        <member name="M:Juzhen.Infrastructure.ConvertUtil.FromJson``1(System.String,System.Func{``0})">
+        <member name="M:Infrastructure.ConvertUtil.FromJson``1(System.String,System.Func{``0})">
             <summary>
             将json反序列化成匿名类型
             </summary>
@@ -940,42 +973,42 @@
             <param name="func"></param>
             <returns></returns>
         </member>
-        <member name="M:Juzhen.Infrastructure.ConvertUtil.FromJson(System.String)">
+        <member name="M:Infrastructure.ConvertUtil.FromJson(System.String)">
             <summary>
             将JSON字符串转换成JSON对象
             </summary>
             <param name="json"></param>
             <returns></returns>
         </member>
-        <member name="M:Juzhen.Infrastructure.ConvertUtil.FromJsonObject(System.String)">
+        <member name="M:Infrastructure.ConvertUtil.FromJsonObject(System.String)">
             <summary>
             将JSON字符串转换成JSON对象
             </summary>
             <param name="json"></param>
             <returns></returns>
         </member>
-        <member name="M:Juzhen.Infrastructure.ConvertUtil.FromJsonArray(System.String)">
+        <member name="M:Infrastructure.ConvertUtil.FromJsonArray(System.String)">
             <summary>
             将JSON字符串转换成JSON数组
             </summary>
             <param name="json"></param>
             <returns></returns>
         </member>
-        <member name="M:Juzhen.Infrastructure.ConvertUtil.ToBase64(System.String)">
+        <member name="M:Infrastructure.ConvertUtil.ToBase64(System.String)">
             <summary>
             转化成Base64字符串
             </summary>
             <param name="str"></param>
             <returns></returns>
         </member>
-        <member name="M:Juzhen.Infrastructure.ConvertUtil.FromBase64(System.String)">
+        <member name="M:Infrastructure.ConvertUtil.FromBase64(System.String)">
             <summary>
             解析Base64字符
             </summary>
             <param name="str"></param>
             <returns></returns>
         </member>
-        <member name="M:Juzhen.Infrastructure.ConvertUtil.ToBytes(System.String,System.String)">
+        <member name="M:Infrastructure.ConvertUtil.ToBytes(System.String,System.String)">
             <summary>
             转化成byte数组
             </summary>
@@ -983,7 +1016,7 @@
             <param name="encoding">默认是UTF-8</param>
             <returns></returns>
         </member>
-        <member name="M:Juzhen.Infrastructure.ConvertUtil.EncodingConvert(System.String,System.String,System.String)">
+        <member name="M:Infrastructure.ConvertUtil.EncodingConvert(System.String,System.String,System.String)">
             <summary>
             将字符编码从一种转换成另一种
             </summary>
@@ -992,42 +1025,42 @@
             <param name="dstEncoding"></param>
             <returns></returns>
         </member>
-        <member name="M:Juzhen.Infrastructure.ExcelUtil.Write(System.Data.DataTable)">
+        <member name="M:Infrastructure.ExcelUtil.Write(System.Data.DataTable)">
             <summary>
             将DataTable转化成HSSFWorkbook
             </summary>
             <param name="table"></param>
             <returns></returns>
         </member>
-        <member name="M:Juzhen.Infrastructure.ExcelUtil.WriteToFile(System.Data.DataTable,System.String)">
+        <member name="M:Infrastructure.ExcelUtil.WriteToFile(System.Data.DataTable,System.String)">
             <summary>
             保存到本地文件
             </summary>
             <param name="table"></param>
             <param name="filePath"></param>
         </member>
-        <member name="M:Juzhen.Infrastructure.ExcelUtil.WriteToFile``1(System.Collections.Generic.List{``0},System.String)">
+        <member name="M:Infrastructure.ExcelUtil.WriteToFile``1(System.Collections.Generic.List{``0},System.String)">
             <summary>
             保存到本地文件
             </summary>
             <param name="list"></param>
             <param name="filePath"></param>
         </member>
-        <member name="M:Juzhen.Infrastructure.ExcelUtil.WriteToClient(System.IO.Stream,System.Data.DataTable)">
+        <member name="M:Infrastructure.ExcelUtil.WriteToClient(System.IO.Stream,System.Data.DataTable)">
             <summary>
             响应到浏览器
             </summary>
             <param name="body"></param>
             <param name="table"></param>
         </member>
-        <member name="M:Juzhen.Infrastructure.ExcelUtil.WriteToClient``1(System.IO.Stream,System.Collections.Generic.List{``0})">
+        <member name="M:Infrastructure.ExcelUtil.WriteToClient``1(System.IO.Stream,System.Collections.Generic.List{``0})">
             <summary>
             响应到浏览器
             </summary>
             <param name="body"></param>
             <param name="list"></param>
         </member>
-        <member name="M:Juzhen.Infrastructure.ExcelUtil.Read(System.IO.Stream,System.String,System.Int32,System.Int32)">
+        <member name="M:Infrastructure.ExcelUtil.Read(System.IO.Stream,System.String,System.Int32,System.Int32)">
             <summary>
             将Excel转化成HSSFWorkbook
             </summary>
@@ -1037,7 +1070,7 @@
             <param name="startRow">开始行</param>
             <returns></returns>
         </member>
-        <member name="M:Juzhen.Infrastructure.ExcelUtil.Read(System.String,System.Int32,System.Int32)">
+        <member name="M:Infrastructure.ExcelUtil.Read(System.String,System.Int32,System.Int32)">
             <summary>
             把excel文件转换成datatable
             </summary>
@@ -1046,7 +1079,7 @@
             <param name="startRow"></param>
             <returns></returns>
         </member>
-        <member name="M:Juzhen.Infrastructure.ExcelUtil.ListToDataTable``1(System.Collections.Generic.List{``0})">
+        <member name="M:Infrastructure.ExcelUtil.ListToDataTable``1(System.Collections.Generic.List{``0})">
             <summary>
             List转DataTable
             </summary>
@@ -1054,32 +1087,32 @@
             <param name="list"></param>
             <returns></returns>
         </member>
-        <member name="T:Juzhen.Infrastructure.HttpUtil">
+        <member name="T:Infrastructure.HttpUtil">
             <summary>
             通用的请求工具
             </summary>
         </member>
-        <member name="M:Juzhen.Infrastructure.HttpUtil.Post(Juzhen.Infrastructure.HttpItem)">
+        <member name="M:Infrastructure.HttpUtil.Post(Infrastructure.HttpItem)">
             <summary>
             发起请求
             </summary>
             <param name="item">请求选项</param>
             <returns></returns>
         </member>
-        <member name="M:Juzhen.Infrastructure.HttpUtil.SetHttpItem(Juzhen.Infrastructure.HttpItem)">
+        <member name="M:Infrastructure.HttpUtil.SetHttpItem(Infrastructure.HttpItem)">
             <summary>
             初始化请求选项
             </summary>
             <param name="item"></param>
         </member>
-        <member name="M:Juzhen.Infrastructure.HttpUtil.CreateRequest(Juzhen.Infrastructure.HttpItem)">
+        <member name="M:Infrastructure.HttpUtil.CreateRequest(Infrastructure.HttpItem)">
             <summary>
             创建请求
             </summary>
             <param name="item"></param>
             <returns></returns>
         </member>
-        <member name="M:Juzhen.Infrastructure.HttpUtil.GetResult(System.Net.HttpWebRequest,Juzhen.Infrastructure.HttpItem)">
+        <member name="M:Infrastructure.HttpUtil.GetResult(System.Net.HttpWebRequest,Infrastructure.HttpItem)">
             <summary>
             获取响应结果
             </summary>
@@ -1087,155 +1120,155 @@
             <param name="item"></param>
             <returns></returns>
         </member>
-        <member name="T:Juzhen.Infrastructure.HttpResult">
+        <member name="T:Infrastructure.HttpResult">
             <summary>
             获取响应结果
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpResult.Document">
+        <member name="P:Infrastructure.HttpResult.Document">
             <summary>
             响应文档
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpResult.Bytes">
+        <member name="P:Infrastructure.HttpResult.Bytes">
             <summary>
             响应字节
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpResult.Exception">
+        <member name="P:Infrastructure.HttpResult.Exception">
             <summary>
             异常
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpResult.StatusCode">
+        <member name="P:Infrastructure.HttpResult.StatusCode">
             <summary>
             状态码
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpResult.Cookies">
+        <member name="P:Infrastructure.HttpResult.Cookies">
             <summary>
             Cookie
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpResult.Headers">
+        <member name="P:Infrastructure.HttpResult.Headers">
             <summary>
             获取来自服务器的与此响应关联的标头。
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpResult.StatusDescription">
+        <member name="P:Infrastructure.HttpResult.StatusDescription">
             <summary>
             状态描述
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpResult.CharacterSet">
+        <member name="P:Infrastructure.HttpResult.CharacterSet">
             <summary>
             字符集
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpResult.ContentType">
+        <member name="P:Infrastructure.HttpResult.ContentType">
             <summary>
             响应上下文类型
             </summary>
         </member>
-        <member name="T:Juzhen.Infrastructure.HttpItem">
+        <member name="T:Infrastructure.HttpItem">
             <summary>
             请求选项
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpItem.URL">
+        <member name="P:Infrastructure.HttpItem.URL">
             <summary>
             Url:不能为空
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpItem.Method">
+        <member name="P:Infrastructure.HttpItem.Method">
             <summary>
             POST/GET
             Default:GET
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpItem.Data">
+        <member name="P:Infrastructure.HttpItem.Data">
             <summary>
             请求参数
             Type:string/FormData
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpItem.DataEncoding">
+        <member name="P:Infrastructure.HttpItem.DataEncoding">
             <summary>
             请求参数字符编码
             Default:UTF-8
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpItem.DocumentEncoding">
+        <member name="P:Infrastructure.HttpItem.DocumentEncoding">
             <summary>
             响应文档字符编码
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpItem.Accept">
+        <member name="P:Infrastructure.HttpItem.Accept">
             <summary>
             获取或设置 Accept HTTP 标头的值。
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpItem.ContentType">
+        <member name="P:Infrastructure.HttpItem.ContentType">
             <summary>
             请求上下文类型
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpItem.Connection">
+        <member name="P:Infrastructure.HttpItem.Connection">
             <summary>
             获取或设置 Connection HTTP 标头的值。
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpItem.Cookie">
+        <member name="P:Infrastructure.HttpItem.Cookie">
             <summary>
             请求Cookie
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpItem.Host">
+        <member name="P:Infrastructure.HttpItem.Host">
             <summary>
             获取或设置要在 HTTP 请求中独立于请求 URI 使用的 Host 标头值。
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpItem.KeepAlive">
+        <member name="P:Infrastructure.HttpItem.KeepAlive">
             <summary>
             获取或设置一个值，该值指示是否与 Internet 资源建立持续型连接。
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpItem.Referer">
+        <member name="P:Infrastructure.HttpItem.Referer">
             <summary>
             获取或设置 Referer HTTP 标头的值。
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpItem.Timeout">
+        <member name="P:Infrastructure.HttpItem.Timeout">
             <summary>
             获取或设置 System.Net.HttpWebRequest.GetResponse 和 System.Net.HttpWebRequest.GetRequestStream方法的超时值（以毫秒为单位）。
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpItem.UserAgent">
+        <member name="P:Infrastructure.HttpItem.UserAgent">
             <summary>
             获取或设置 User-agent HTTP 标头的值。
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpItem.AllowAutoRedirect">
+        <member name="P:Infrastructure.HttpItem.AllowAutoRedirect">
             <summary>
             获取或设置一个值，该值指示请求是否应跟随重定向响应。
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpItem.Credentials">
+        <member name="P:Infrastructure.HttpItem.Credentials">
             <summary>
             获取或设置请求的身份验证信息。
             </summary>
         </member>
-        <member name="P:Juzhen.Infrastructure.HttpItem.X509Certificate">
+        <member name="P:Infrastructure.HttpItem.X509Certificate">
             <summary>
             获取或设置与此请求关联的安全证书
             </summary>
         </member>
-        <member name="T:Juzhen.Infrastructure.HttpForm">
+        <member name="T:Infrastructure.HttpForm">
             <summary>
             表单参数
             </summary>
         </member>
-        <member name="M:Juzhen.Infrastructure.NpoiExcelImportHelper.GetExcelType(System.IO.Stream,System.String)">
+        <member name="M:Infrastructure.NpoiExcelImportHelper.GetExcelType(System.IO.Stream,System.String)">
             <summary>
             获取文件类型
             </summary>
@@ -1243,7 +1276,7 @@
             <param name="type"></param>
             <returns></returns>
         </member>
-        <member name="M:Juzhen.Infrastructure.NpoiExcelImportHelper.GetDataTable(System.Int32,System.Data.DataTable,NPOI.SS.UserModel.IWorkbook)">
+        <member name="M:Infrastructure.NpoiExcelImportHelper.GetDataTable(System.Int32,System.Data.DataTable,NPOI.SS.UserModel.IWorkbook)">
             <summary>
             获得DataTable
             </summary>
@@ -1252,7 +1285,7 @@
             <param name="workbook"></param>
             <returns></returns>
         </member>
-        <member name="T:Juzhen.Infrastructure.ZipUtil">
+        <member name="T:Infrastructure.ZipUtil">
             <summary>
             压缩本地文件
             </summary>

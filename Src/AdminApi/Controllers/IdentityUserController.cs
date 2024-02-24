@@ -1,7 +1,7 @@
 ﻿
 using AdminApi.Application;
 using Juzhen.IdentityUI.Domain;
-using Juzhen.Infrastructure;
+using Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;

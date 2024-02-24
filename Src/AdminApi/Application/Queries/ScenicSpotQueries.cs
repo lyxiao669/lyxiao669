@@ -1,5 +1,5 @@
-using Juzhen.Domain.Aggregates;
-using Juzhen.Infrastructure;
+using Domain.Aggregates;
+using Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -17,11 +17,12 @@ namespace AdminApi.Application.Queries
             _context = context;
         }
 
-        public async Task<PageResult<ScenicSpots>> GetScenicSpotsListAsync(PageModel model)
+        public async Task<PageResult<ScenicSpots>> GetScenicSpotsListAsync(ScenicSpotModel model)
         {
-            var query = _context.ScenicSpots;
+            var query = _context.ScenicSpots
+            .Where(s => model.KeyWord == null || s.ProvinceName.Contains(model.KeyWord) || s.CityName.Contains(model.KeyWord));
             var list = await query
-                //.OrderByDescending(a => a.Sort)
+                .OrderByDescending(a => a.Id)
                 .Page(model.PageIndex, model.PageSize)
                 .ToListAsync();
             var count = await query.CountAsync();

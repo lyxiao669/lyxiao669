@@ -1,12 +1,12 @@
-﻿using Juzhen.Domain.Exceptions;
-using Juzhen.Infrastructure;
+﻿using Domain.Exceptions;
+using Infrastructure;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
 
-namespace Juzhen.Infrastructure
+namespace Infrastructure
 {
     public class ApiExceptionHandlerMiddleware
     {

@@ -11,6 +11,10 @@ namespace AdminApi.Application.Commands.ScenicSpotsAggregate
         public decimal TicketPrice { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
+        public int Likes { get; set; }
         public string Images { get; set; }
+        public string Address { get; set; }
+        public string Telephone { get; set; }
+        public string OpeningHours { get; set; }
     }
 }

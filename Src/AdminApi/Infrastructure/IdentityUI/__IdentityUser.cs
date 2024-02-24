@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Juzhen.Infrastructure
+namespace Infrastructure
 {
     [Table("__identity_user")]
     public class __IdentityUser

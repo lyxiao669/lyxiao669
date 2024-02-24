@@ -1,4 +1,4 @@
-﻿using Juzhen.Domain.Aggregates;
+﻿using Domain.Aggregates;
 using System.Collections.Generic;
 
 namespace AdminApi.Application

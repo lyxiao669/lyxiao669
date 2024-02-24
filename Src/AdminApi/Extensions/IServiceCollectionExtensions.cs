@@ -1,7 +1,7 @@
 ﻿
 using AdminApi.Application;
-using Juzhen.Domain.SeedWork;
-using Juzhen.Infrastructure;
+using Domain.SeedWork;
+using Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using System.Linq;
 

@@ -4,12 +4,12 @@ using System.Threading.Tasks;
 using MediatR;
 using AdminApi.Application.Commands.ScenicSpotsAggregate;
 using AdminApi.Application;
-using Juzhen.Domain.Aggregates;
+using Domain.Aggregates;
 using AdminApi.Application.Queries; 
 
 namespace AdminApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class ScenicSpotsController : ControllerBase
     {
@@ -39,7 +39,11 @@ namespace AdminApi.Controllers
             }
             return BadRequest();
         }
-
+        /// <summary>
+        /// 更新景区信息
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
         [HttpPut]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
@@ -52,15 +56,23 @@ namespace AdminApi.Controllers
             }
             return BadRequest();
         }
-
+        /// <summary>
+        /// 获取景区列表
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpGet]
         [ProducesResponseType(typeof(PageResult<ScenicSpots>), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult> Get([FromQuery] PageModel model)
+        public async Task<ActionResult> Get([FromQuery] ScenicSpotModel model)
         {
             var data = await _scenicSpotsQueries.GetScenicSpotsListAsync(model);
             return Ok(data);
         }
-
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id:int}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]

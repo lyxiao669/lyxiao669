@@ -1,4 +1,4 @@
-﻿using Juzhen.Infrastructure;
+﻿using Infrastructure;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Security.Claims;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace Juzhen.Infrastructure
+namespace Infrastructure
 {
     public class DefaultJwtBearerOptions
     {

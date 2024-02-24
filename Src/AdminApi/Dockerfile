@@ -7,8 +7,8 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["AdminApi/AdminApi.csproj", "AdminApi/"]
-COPY ["Juzhen.Infrastructure/Juzhen.Infrastructure.csproj", "Juzhen.Infrastructure/"]
-COPY ["Juzhen.Domain/Juzhen.Domain.csproj", "Juzhen.Domain/"]
+COPY ["Infrastructure/Infrastructure.csproj", "Infrastructure/"]
+COPY ["Domain/Domain.csproj", "Domain/"]
 RUN dotnet restore "AdminApi/AdminApi.csproj"
 COPY . .
 WORKDIR "/src/AdminApi"

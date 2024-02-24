@@ -1,5 +1,5 @@
-﻿using Juzhen.Domain.Aggregates;
-using Juzhen.Infrastructure;
+﻿using Domain.Aggregates;
+using Infrastructure;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;

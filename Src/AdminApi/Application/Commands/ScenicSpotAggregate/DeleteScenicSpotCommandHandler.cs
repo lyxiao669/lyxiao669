@@ -1,5 +1,5 @@
-using Juzhen.Domain.Aggregates;
-using Juzhen.Infrastructure.Repositories;
+using Domain.Aggregates;
+using Infrastructure.Repositories;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;

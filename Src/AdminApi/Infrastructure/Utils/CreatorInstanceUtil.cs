@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Juzhen.Infrastructure
+namespace Infrastructure
 {
     public class CreatorInstanceUtil
     {

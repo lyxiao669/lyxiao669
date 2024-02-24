@@ -1,4 +1,4 @@
-﻿using Juzhen.Domain.Aggregates;
+﻿using Domain.Aggregates;
 using MediatR;
 
 namespace AdminApi.Application

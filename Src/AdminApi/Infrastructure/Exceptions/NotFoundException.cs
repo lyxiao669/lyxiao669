@@ -1,4 +1,4 @@
-﻿namespace Juzhen.Infrastructure
+﻿namespace Infrastructure
 {
     public class NotFoundException:ServiceException
     {

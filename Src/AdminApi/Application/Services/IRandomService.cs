@@ -1,5 +1,5 @@
 ﻿
-using Juzhen.Infrastructure;
+using Infrastructure;
 using System.Threading.Tasks;
 
 namespace AdminApi.Application

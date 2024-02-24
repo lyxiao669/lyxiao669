@@ -7,7 +7,7 @@ using System.Net;
 using System.Text;
 using System.Web;
 
-namespace Juzhen.Infrastructure
+namespace Infrastructure
 {
     /// <summary>
     /// 压缩本地文件

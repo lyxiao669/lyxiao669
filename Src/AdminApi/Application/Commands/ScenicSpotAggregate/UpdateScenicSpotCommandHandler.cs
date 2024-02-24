@@ -1,5 +1,5 @@
-using Juzhen.Domain.Aggregates;
-using Juzhen.Infrastructure.Repositories;
+using Domain.Aggregates;
+using Infrastructure.Repositories;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
@@ -29,6 +29,9 @@ namespace AdminApi.Application.Commands.ScenicSpotsAggregate
             scenicSpot.Latitude = request.Latitude;
             scenicSpot.Longitude = request.Longitude;
             scenicSpot.Images = request.Images;
+            scenicSpot.Address = request.Address;
+            scenicSpot.Telephone = request.Telephone;
+            scenicSpot.OpeningHours = request.OpeningHours;
             
             _scenicSpotRepository.Update(scenicSpot);
             await _scenicSpotRepository.UnitOfWork.SaveEntitiesAsync(cancellationToken);

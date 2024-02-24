@@ -1,5 +1,5 @@
-﻿using Juzhen.Domain.Aggregates;
-using Juzhen.Domain.Aggregates.QuestionOptionsAggregate;
+﻿using Domain.Aggregates;
+using Domain.Aggregates.QuestionOptionsAggregate;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;

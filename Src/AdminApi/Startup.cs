@@ -1,6 +1,6 @@
 using AdminApi.Application;
 using Juzhen.IdentityUI;
-using Juzhen.Infrastructure;
+using Infrastructure;
 using Juzhen.Qiniu.Infrastructure;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -120,7 +120,7 @@ namespace AdminApi
                 var filenames = new string[]
                 {
                     $"AdminApi.xml",
-                    $"Juzhen.Domain.xml"
+                    $"Domain.xml"
                 };
                 foreach (var item in filenames)
                 {

@@ -7,7 +7,7 @@ using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
-namespace Juzhen.Infrastructure
+namespace Infrastructure
 {
     /// <summary>
     /// 通用的请求工具

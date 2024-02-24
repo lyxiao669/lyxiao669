@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Juzhen.Infrastructure
+namespace Infrastructure
 {
     public class MD5Helper
     {

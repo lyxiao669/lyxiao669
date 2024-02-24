@@ -1,7 +1,7 @@
 ﻿
 using AdminApi.Application;
 
-using Juzhen.Infrastructure;
+using Infrastructure;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

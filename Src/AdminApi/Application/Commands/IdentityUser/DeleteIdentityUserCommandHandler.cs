@@ -1,4 +1,4 @@
-﻿using Juzhen.Domain.Aggregates;
+﻿using Domain.Aggregates;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;

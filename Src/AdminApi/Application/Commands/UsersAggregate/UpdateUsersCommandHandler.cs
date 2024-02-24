@@ -1,6 +1,6 @@
-﻿using Juzhen.Domain.Aggregates;
-using Juzhen.Infrastructure;
-using Juzhen.Infrastructure.Repositories;
+﻿using Domain.Aggregates;
+using Infrastructure;
+using Infrastructure.Repositories;
 using MediatR;
 using System;
 using System.Collections.Generic;

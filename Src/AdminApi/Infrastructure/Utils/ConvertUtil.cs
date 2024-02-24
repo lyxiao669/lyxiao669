@@ -6,7 +6,7 @@ using System;
 using System.Linq;
 using System.Text;
 
-namespace Juzhen.Infrastructure
+namespace Infrastructure
 {
     /// <summary>
     /// 数据转换工具类

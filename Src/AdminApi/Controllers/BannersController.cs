@@ -1,6 +1,6 @@
 ﻿using AdminApi.Application;
 using AdminApi.Application.Queries;
-using Juzhen.Domain.Aggregates;
+using Domain.Aggregates;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;

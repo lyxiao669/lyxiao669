@@ -1,4 +1,4 @@
-﻿using Juzhen.Domain.Aggregates;
+﻿using Domain.Aggregates;
 using Juzhen.Infrastructur;
 using Juzhen.Qiniu.Infrastructure;
 using MediatR;
