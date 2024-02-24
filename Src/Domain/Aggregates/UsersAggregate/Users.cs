@@ -19,12 +19,12 @@ namespace Domain.Aggregates
         /// 并发控制
         /// </summary>
         [Timestamp]
-        public byte[] Timestamp { get; private set; }
+        public byte[] Timestamp { get;  set; }
 
-        //public int Id { get; private set; }
-        public string UserName { get; private set; }
-        public string Password { get; private set; }
-        public string Avatar { get; private set; }
+        //public int Id { get;  set; }
+        public string UserName { get;  set; }
+        public string Password { get;  set; }
+        public string Avatar { get;  set; }
 
         public Users() { }
 

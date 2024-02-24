@@ -39,6 +39,21 @@
             false=最新,true=全部
             </summary>
         </member>
+        <member name="P:MiniApi.Application.UsersModel.UserName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.UsersModel.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.UsersModel.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
         <member name="M:MiniApi.Application.Queries.AchievementQueries.GetAchievementAsync">
             <summary>
             用户成绩
@@ -114,6 +129,21 @@
             </summary>
             <param name="questionId"></param>
             <returns></returns>
+        </member>
+        <member name="M:MiniApi.Application.UsersQueries.Login(MiniApi.Application.UsersModel)">
+            <summary>
+            登录
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Application.UsersQueries.GetUserDetails(System.Int32)">
+            <summary>
+            获取用户详情
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+            <exception cref="T:Juzhen.MiniProgramAPI.ServiceException"></exception>
         </member>
         <member name="M:MiniApi.Application.UserVsionQueries.GetUserVsionAsync">
             <summary>
@@ -306,6 +336,21 @@
             是否正确答案
             </summary>
         </member>
+        <member name="P:MiniApi.Application.UsersInfoResult.UserName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.UsersInfoResult.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.UsersInfoResult.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
         <member name="T:MiniApi.Application.IPhotoService">
             <summary>
             C:command，对外的功能（单一职责）
@@ -420,6 +465,27 @@
             用户答题
             </summary>
             <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Controllers.UsersController.Register(MiniApi.Application.UsersModel)">
+            <summary>
+            用户注册
+            </summary>
+            <param name="model">注册信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Controllers.UsersController.Login(MiniApi.Application.UsersModel)">
+            <summary>
+            用户登录
+            </summary>
+            <param name="model">登录信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Controllers.UsersController.GetUserDetails(System.Int32)">
+            <summary>
+            获取用户详情
+            </summary>
+            <param name="userId">用户ID</param>
             <returns></returns>
         </member>
         <member name="T:MiniApi.Controllers.UserVsionsController">
