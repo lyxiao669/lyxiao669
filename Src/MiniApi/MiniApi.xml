@@ -39,6 +39,16 @@
             false=最新,true=全部
             </summary>
         </member>
+        <member name="P:MiniApi.Application.UsersLoginModel.UserName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.UsersLoginModel.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
         <member name="P:MiniApi.Application.UsersModel.UserName">
             <summary>
             姓名
@@ -130,7 +140,7 @@
             <param name="questionId"></param>
             <returns></returns>
         </member>
-        <member name="M:MiniApi.Application.UsersQueries.Login(MiniApi.Application.UsersModel)">
+        <member name="M:MiniApi.Application.UsersQueries.Login(MiniApi.Application.UsersLoginModel)">
             <summary>
             登录
             </summary>
@@ -141,7 +151,6 @@
             <summary>
             获取用户详情
             </summary>
-            <param name="userId"></param>
             <returns></returns>
             <exception cref="T:Juzhen.MiniProgramAPI.ServiceException"></exception>
         </member>
@@ -474,7 +483,7 @@
             <param name="model">注册信息</param>
             <returns></returns>
         </member>
-        <member name="M:MiniApi.Controllers.UsersController.Login(MiniApi.Application.UsersModel)">
+        <member name="M:MiniApi.Controllers.UsersController.Login(MiniApi.Application.UsersLoginModel)">
             <summary>
             用户登录
             </summary>
@@ -485,7 +494,6 @@
             <summary>
             获取用户详情
             </summary>
-            <param name="userId">用户ID</param>
             <returns></returns>
         </member>
         <member name="T:MiniApi.Controllers.UserVsionsController">

@@ -30,6 +30,12 @@ namespace Juzhen.MiniProgramAPI
             services.AddTransient<IIdentityService, IdentityService>();
             services.AddSingleton<IPhotoService, PhotoService>();
         }
+
+        public static void AddUsersService(this IServiceCollection services){
+            services.AddTransient<IIUsersService, IUsersService>();
+            // services.AddSingleton<IPhotoService, PhotoService>();
+        }
+
         /// <summary>
         /// 注册所有仓储
         /// </summary>

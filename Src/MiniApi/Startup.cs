@@ -18,6 +18,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Applet.API.Infrastructure;
 
 namespace MiniApi
 {
@@ -27,12 +28,12 @@ namespace MiniApi
         {
             Configuration = configuration;
 
-            //ÆßÅ£Ïà¹ØÅäÖÃ
+            //ï¿½ï¿½Å£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             string qiniu_accesskey = Configuration.GetValue<string>("QiniuStrings:accesskey");
             string qiniu_secretkey = Configuration.GetValue<string>("QiniuStrings:secretkey");
             string qiniu_domain = Configuration.GetValue<string>("QiniuStrings:domain");
             string qiniu_scope = Configuration.GetValue<string>("QiniuStrings:scope");
-
+            
             QiniuUtil.AddConfigSource(qiniu_accesskey, qiniu_secretkey, qiniu_domain, qiniu_scope);
         }
 
@@ -42,6 +43,9 @@ namespace MiniApi
         public void ConfigureServices(IServiceCollection services)
         {
             //services.Configure<Wechat.Sdk.WechatOptions>(Configuration.GetSection("WechatSettings"));
+            // services.AddUsersService();
+            
+            services.AddScoped<UsersAccessor>();
             services.AddIdentityService();
             services.AddIdWorker();
             services.AddScoped(typeof(IPipelineBehavior<,>), typeof(TransactionBehaviour<,>));
@@ -77,7 +81,7 @@ namespace MiniApi
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     In = ParameterLocation.Header,
-                    Description = "ÇëÊäÈëOAuth½Ó¿Ú·µ»ØµÄToken£¬Ç°ÖÃBearer¡£Ê¾Àý£ºBearer {Token}",
+                    Description = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½OAuthï¿½Ó¿Ú·ï¿½ï¿½Øµï¿½Tokenï¿½ï¿½Ç°ï¿½ï¿½Bearerï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Bearer {Token}",
                     Name = "Authorization",
                     Type = SecuritySchemeType.ApiKey
                 });

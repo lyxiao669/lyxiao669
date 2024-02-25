@@ -53,7 +53,7 @@ namespace MiniApi.Application
     /// </summary>
     /// <param name="model"></param>
     /// <returns></returns>
-    public async Task<AccessTokenResult> Login(UsersModel model)
+    public async Task<AccessTokenResult> Login(UsersLoginModel model)
     {
       var user = await _context.Users.Where(a => a.UserName == model.UserName && a.Password == model.Password)
           .FirstOrDefaultAsync();
@@ -81,12 +81,11 @@ namespace MiniApi.Application
     /// <summary>
     /// 获取用户详情
     /// </summary>
-    /// <param name="userId"></param>
     /// <returns></returns>
     /// <exception cref="ServiceException"></exception>
-    public async Task<UsersInfoResult> GetUserDetails(int userId)
+    public async Task<UsersInfoResult> GetUserDetails(int Id)
         {
-            var user = await _context.Users.FindAsync(userId);
+            var user = await _context.Users.FindAsync(Id);
 
             if (user == null)
             {

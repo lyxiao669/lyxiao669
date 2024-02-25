@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using System.Threading.Tasks;
 using MiniApi.Application;
-using Juzhen.MiniProgramAPI; // 确保这里的命名空间正确指向您的UsersQueries所在的命名空间
+// 确保这里的命名空间正确指向您的UsersQueries所在的命名空间
 
 namespace MiniApi.Controllers
 {
@@ -27,22 +27,17 @@ namespace MiniApi.Controllers
         /// <returns></returns>
         [HttpPost("Register")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<ActionResult> Register([FromBody] UsersModel model)
+        public async Task<ActionResult> Register([FromQuery] UsersModel model)
         {
-            try
+
+            var result = await _usersQueries.RegisterUser(model);
+            if (result)
             {
-                var result = await _usersQueries.RegisterUser(model);
-                if (result)
-                {
-                    return Ok("注册成功");
-                }
-                return BadRequest("注册失败");
+                return Ok("注册成功");
             }
-            catch (ServiceException ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return BadRequest("注册失败");
+
+
         }
 
         /// <summary>
@@ -52,43 +47,32 @@ namespace MiniApi.Controllers
         /// <returns></returns>
         [HttpPost("Login")]
         [ProducesResponseType(typeof(AccessTokenResult), (int)HttpStatusCode.OK)]
-        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<ActionResult> Login([FromBody] UsersModel model)
+        public async Task<ActionResult> Login([FromQuery] UsersLoginModel model)
         {
-            try
-            {
-                var data = await _usersQueries.Login(model);
-                return Ok(data);
-            }
-            catch (ServiceException ex)
-            {
-                return BadRequest(ex.Message);
-            }
+
+            var data = await _usersQueries.Login(model);
+            return Ok(data);
+
+
         }
 
         /// <summary>
         /// 获取用户详情
         /// </summary>
-        /// <param name="userId">用户ID</param>
         /// <returns></returns>
-        [HttpGet("{userId}")]
+        [HttpGet]
         [ProducesResponseType(typeof(UsersInfoResult), (int)HttpStatusCode.OK)]
-        [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        public async Task<ActionResult> GetUserDetails([FromRoute] int userId)
+        public async Task<ActionResult> GetUserDetails([FromQuery]  int Id)
         {
-            try
+
+            var data = await _usersQueries.GetUserDetails(Id);
+            if (data != null)
             {
-                var data = await _usersQueries.GetUserDetails(userId);
-                if (data != null)
-                {
-                    return Ok(data);
-                }
-                return NotFound("用户不存在");
+                return Ok(data);
             }
-            catch (ServiceException ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return NotFound("用户不存在");
+
         }
+
     }
 }

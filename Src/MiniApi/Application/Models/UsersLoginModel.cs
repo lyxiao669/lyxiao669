@@ -1,6 +1,6 @@
 namespace MiniApi.Application
 {
-  public class UsersModel
+  public class UsersLoginModel
   {
     /// <summary>
     /// 姓名
@@ -11,9 +11,5 @@ namespace MiniApi.Application
     /// 密码
     /// </summary>
     public string Password { get; set; }
-    /// <summary>
-    /// 头像
-    /// </summary>
-    public string Avatar { get; set; }
   }
 }
