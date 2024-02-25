@@ -83,9 +83,9 @@ namespace MiniApi.Application
     /// </summary>
     /// <returns></returns>
     /// <exception cref="ServiceException"></exception>
-    public async Task<UsersInfoResult> GetUserDetails(int Id)
+    public async Task<UsersInfoResult> GetUserDetails()
         {
-            var user = await _context.Users.FindAsync(Id);
+            var user = await _context.Users.FindAsync(_usersAccessor.Id);
 
             if (user == null)
             {

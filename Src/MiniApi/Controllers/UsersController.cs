@@ -62,10 +62,10 @@ namespace MiniApi.Controllers
         /// <returns></returns>
         [HttpGet]
         [ProducesResponseType(typeof(UsersInfoResult), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult> GetUserDetails([FromQuery]  int Id)
+        public async Task<ActionResult> GetUserDetails()
         {
 
-            var data = await _usersQueries.GetUserDetails(Id);
+            var data = await _usersQueries.GetUserDetails();
             if (data != null)
             {
                 return Ok(data);

@@ -147,7 +147,7 @@
             <param name="model"></param>
             <returns></returns>
         </member>
-        <member name="M:MiniApi.Application.UsersQueries.GetUserDetails(System.Int32)">
+        <member name="M:MiniApi.Application.UsersQueries.GetUserDetails">
             <summary>
             获取用户详情
             </summary>
@@ -490,7 +490,7 @@
             <param name="model">登录信息</param>
             <returns></returns>
         </member>
-        <member name="M:MiniApi.Controllers.UsersController.GetUserDetails(System.Int32)">
+        <member name="M:MiniApi.Controllers.UsersController.GetUserDetails">
             <summary>
             获取用户详情
             </summary>

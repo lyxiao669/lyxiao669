@@ -101,9 +101,10 @@ namespace Juzhen.MiniProgramAPI
         {
             var jwtOptions = new MyJwtBearerOptions
             {
-                Audience = "juzhen",
-                Issuer = "juzhen",
-                Key = "mVsuVOI3ocFHa^3l"
+                Audience = "xiao",
+                Issuer = "xiao",
+                // Key = "mVsuVOI3ocFHa^3l"
+                Key = "mVsuVOI3ocFHa^3lExtendedToEnsure256BitsLength"
             };
             services.AddSingleton(s =>
             {
