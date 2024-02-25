@@ -53,7 +53,7 @@ namespace MiniApi.Application
     /// </summary>
     /// <param name="model"></param>
     /// <returns></returns>
-    public async Task<AccessTokenResult> Login(UsersLoginModel model)
+    public async Task<UsersModel> Login(UsersLoginModel model)
     {
       var user = await _context.Users.Where(a => a.UserName == model.UserName && a.Password == model.Password)
           .FirstOrDefaultAsync();
@@ -67,12 +67,18 @@ namespace MiniApi.Application
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Name, user.UserName.ToString()),
-                new Claim(ClaimTypes.MobilePhone, user.Password.ToString())
+                new Claim(ClaimTypes.Uri, user.Avatar.ToString())
             };
       var token = _tokenService.CreateToken(cliams);
-      var data = new AccessTokenResult
-      {
-        AccessToken = token,
+      // var data = new AccessTokenResult
+      // {
+      //   AccessToken = token,
+      // };
+      var data = new UsersModel{
+        Id = user.Id.ToString(),
+        UserName = user.UserName,
+        Avatar = user.Avatar
+
       };
       return data;
 

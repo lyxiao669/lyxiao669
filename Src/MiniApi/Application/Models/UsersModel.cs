@@ -2,6 +2,7 @@ namespace MiniApi.Application
 {
   public class UsersModel
   {
+    public string Id { get; set; }
     /// <summary>
     /// 姓名
     /// </summary>
