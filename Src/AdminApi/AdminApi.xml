@@ -906,6 +906,104 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:Juzhen.Infrastructur.ImgUtil">
+            <summary>
+            合成图片工具
+            </summary>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.UploadLocalImg(Juzhen.Infrastructur.ImgUtil.UploadModel)">
+            <summary>
+            上传文件到本地
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.UploadQrCode(System.String,System.String)">
+            <summary>
+            生成二维码合成图片
+            </summary>
+            <param name="qrcode"></param>
+            /// <param name="fullName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.UploadImg(System.String,System.String,System.String)">
+            <summary>
+            两张图片合成
+            </summary>
+            <param name="img">需要合成进去的图</param>
+            <param name="backgroundImg">背景图</param>
+            <param name="photo">照片</param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.CreateQR(System.String,System.String)">
+            <summary>
+            合成二维码加文字图片
+            </summary>
+            <param name="nr">生成二维码字段</param>
+            <param name="fullName">文字内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.CreateImg(System.String,System.String,System.String)">
+            <summary>
+            几张图片合成
+            </summary>
+            <param name="img">需要合成进去的图</param>
+            <param name="backgroundImg">背景图</param>
+            <param name="photo">照片</param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.TextToBitmap(System.String,System.Drawing.Font)">
+            <summary>
+            把文字转换成Bitmap
+            </summary>
+            <param name="text"></param>
+            <param name="font"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.PictureAddText(System.String,System.String,System.String)">
+            <summary>
+            创建合成图片
+            </summary>
+            <param name="desc">文字内容</param>
+            <param name="background">背景图片</param>
+            <param name="qrCode">二维码</param>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.PictureAdd(System.String,System.String,System.String)">
+            <summary>
+            图片合成
+            </summary>
+            <param name="imgs">图片或者二维码</param>
+            <param name="background">背景图片</param>
+            <param name="photo">照片</param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.GetImageBytes(System.Drawing.Image)">
+            <summary>
+            图片装二进制流
+            </summary>
+            <param name="image"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.Infrastructur.ImgUtil.UpoladImage(Juzhen.Infrastructur.ImgUtil.UploadModel)">
+            <summary>
+            上传图片
+            </summary>
+        </member>
+        <member name="T:Juzhen.Infrastructur.ImgUtil.UploadModel">
+            <summary>
+            上传文件请求参数
+            </summary>
+        </member>
+        <member name="P:Juzhen.Infrastructur.ImgUtil.UploadModel.File">
+            <summary>
+            文件
+            </summary>
+        </member>
+        <member name="M:Juzhen.Qiniu.Infrastructure.QiniuUtil.GetUploadToken">
+            <summary>
+            获取凭证
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:Infrastructure.IdWorker.#ctor(System.Int64)">
             <summary>
             机器码
@@ -1289,104 +1387,6 @@
             <summary>
             压缩本地文件
             </summary>
-        </member>
-        <member name="T:Juzhen.Infrastructur.ImgUtil">
-            <summary>
-            合成图片工具
-            </summary>
-        </member>
-        <member name="M:Juzhen.Infrastructur.ImgUtil.UploadLocalImg(Juzhen.Infrastructur.ImgUtil.UploadModel)">
-            <summary>
-            上传文件到本地
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Juzhen.Infrastructur.ImgUtil.UploadQrCode(System.String,System.String)">
-            <summary>
-            生成二维码合成图片
-            </summary>
-            <param name="qrcode"></param>
-            /// <param name="fullName"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Juzhen.Infrastructur.ImgUtil.UploadImg(System.String,System.String,System.String)">
-            <summary>
-            两张图片合成
-            </summary>
-            <param name="img">需要合成进去的图</param>
-            <param name="backgroundImg">背景图</param>
-            <param name="photo">照片</param>
-            <returns></returns>
-        </member>
-        <member name="M:Juzhen.Infrastructur.ImgUtil.CreateQR(System.String,System.String)">
-            <summary>
-            合成二维码加文字图片
-            </summary>
-            <param name="nr">生成二维码字段</param>
-            <param name="fullName">文字内容</param>
-            <returns></returns>
-        </member>
-        <member name="M:Juzhen.Infrastructur.ImgUtil.CreateImg(System.String,System.String,System.String)">
-            <summary>
-            几张图片合成
-            </summary>
-            <param name="img">需要合成进去的图</param>
-            <param name="backgroundImg">背景图</param>
-            <param name="photo">照片</param>
-            <returns></returns>
-        </member>
-        <member name="M:Juzhen.Infrastructur.ImgUtil.TextToBitmap(System.String,System.Drawing.Font)">
-            <summary>
-            把文字转换成Bitmap
-            </summary>
-            <param name="text"></param>
-            <param name="font"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Juzhen.Infrastructur.ImgUtil.PictureAddText(System.String,System.String,System.String)">
-            <summary>
-            创建合成图片
-            </summary>
-            <param name="desc">文字内容</param>
-            <param name="background">背景图片</param>
-            <param name="qrCode">二维码</param>
-        </member>
-        <member name="M:Juzhen.Infrastructur.ImgUtil.PictureAdd(System.String,System.String,System.String)">
-            <summary>
-            图片合成
-            </summary>
-            <param name="imgs">图片或者二维码</param>
-            <param name="background">背景图片</param>
-            <param name="photo">照片</param>
-            <returns></returns>
-        </member>
-        <member name="M:Juzhen.Infrastructur.ImgUtil.GetImageBytes(System.Drawing.Image)">
-            <summary>
-            图片装二进制流
-            </summary>
-            <param name="image"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Juzhen.Infrastructur.ImgUtil.UpoladImage(Juzhen.Infrastructur.ImgUtil.UploadModel)">
-            <summary>
-            上传图片
-            </summary>
-        </member>
-        <member name="T:Juzhen.Infrastructur.ImgUtil.UploadModel">
-            <summary>
-            上传文件请求参数
-            </summary>
-        </member>
-        <member name="P:Juzhen.Infrastructur.ImgUtil.UploadModel.File">
-            <summary>
-            文件
-            </summary>
-        </member>
-        <member name="M:Juzhen.Qiniu.Infrastructure.QiniuUtil.GetUploadToken">
-            <summary>
-            获取凭证
-            </summary>
-            <returns></returns>
         </member>
         <member name="T:Mammothcode.Library.Web.NewHttpUtil">
             <summary>

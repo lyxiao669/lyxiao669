@@ -26,6 +26,12 @@ namespace MiniApi.Application
       _tokenService = tokenService;
     }
 
+    /// <summary>
+    /// 用户注册
+    /// </summary>
+    /// <param name="model"></param>
+    /// <returns></returns>
+    /// <exception cref="ServiceException"></exception>
     public async Task<bool> RegisterUser(UsersModel model)
     {
       var existingUser = await _context.Users
@@ -53,7 +59,7 @@ namespace MiniApi.Application
     /// </summary>
     /// <param name="model"></param>
     /// <returns></returns>
-    public async Task<UsersModel> Login(UsersLoginModel model)
+    public async Task<AccessTokenResult> Login(UsersLoginModel model)
     {
       var user = await _context.Users.Where(a => a.UserName == model.UserName && a.Password == model.Password)
           .FirstOrDefaultAsync();
@@ -67,18 +73,12 @@ namespace MiniApi.Application
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Name, user.UserName.ToString()),
-                new Claim(ClaimTypes.Uri, user.Avatar.ToString())
+                new Claim(ClaimTypes.MobilePhone, user.Password.ToString())
             };
       var token = _tokenService.CreateToken(cliams);
-      // var data = new AccessTokenResult
-      // {
-      //   AccessToken = token,
-      // };
-      var data = new UsersModel{
-        Id = user.Id.ToString(),
-        UserName = user.UserName,
-        Avatar = user.Avatar
-
+      var data = new AccessTokenResult
+      {
+        AccessToken = token,
       };
       return data;
 
@@ -90,21 +90,21 @@ namespace MiniApi.Application
     /// <returns></returns>
     /// <exception cref="ServiceException"></exception>
     public async Task<UsersInfoResult> GetUserDetails()
-        {
-            var user = await _context.Users.FindAsync(_usersAccessor.Id);
+    {
+      var user = await _context.Users.FindAsync(_usersAccessor.Id);
 
-            if (user == null)
-            {
-                throw new ServiceException("用户不存在");
-            }
+      if (user == null)
+      {
+        throw new ServiceException("用户不存在");
+      }
 
-            return new UsersInfoResult
-            {
-                Id = user.Id,
-                UserName = user.UserName,
-                Avatar = user.Avatar,
-                // 可以添加更多需要返回的用户信息
-            };
-        }
+      return new UsersInfoResult
+      {
+        Id = user.Id,
+        UserName = user.UserName,
+        Avatar = user.Avatar,
+        // 可以添加更多需要返回的用户信息
+      };
+    }
   }
 }

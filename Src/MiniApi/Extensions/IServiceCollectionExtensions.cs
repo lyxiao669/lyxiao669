@@ -168,6 +168,31 @@ namespace Juzhen.MiniProgramAPI
             });
             return services;
         }
+        /// <summary>
+        /// 解析用户详情
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
+        public static IServiceCollection AddMyUsersAccessor(this IServiceCollection services)
+        {
+            services.AddScoped(s =>
+            {
+                var accessor = s.GetRequiredService<IHttpContextAccessor>();
+                var nameId = accessor.HttpContext.User
+                    .FindFirst(a => a.Type == System.Security.Claims.ClaimTypes.NameIdentifier)?.Value ?? "0";
+
+                var userName = accessor.HttpContext.User
+                    .FindFirst(a => a.Type == System.Security.Claims.ClaimTypes.Name)?.Value;
+
+                var avatar = accessor.HttpContext.User
+                    .FindFirst(a => a.Type == System.Security.Claims.ClaimTypes.MobilePhone)?.Value;
+
+                var id = Convert.ToInt32(nameId);
+
+                return new UsersAccessor(id, userName,avatar);
+            });
+            return services;
+        }
 
         public static IServiceCollection AddRedisConnection(this IServiceCollection services)
         {

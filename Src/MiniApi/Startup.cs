@@ -43,9 +43,8 @@ namespace MiniApi
         public void ConfigureServices(IServiceCollection services)
         {
             //services.Configure<Wechat.Sdk.WechatOptions>(Configuration.GetSection("WechatSettings"));
-            // services.AddUsersService();
+            services.AddMyUsersAccessor();
             
-            services.AddScoped<UsersAccessor>();
             services.AddIdentityService();
             services.AddIdWorker();
             services.AddScoped(typeof(IPipelineBehavior<,>), typeof(TransactionBehaviour<,>));
@@ -64,6 +63,8 @@ namespace MiniApi
             services.AddMyAuthentication();
             services.AddMyClients(Configuration);
             services.AddMyUserAccessor();
+
+            
             services.AddApplicationQueries();
             services.AddApplicationRepositories();
             services.AddHttpContextAccessor();

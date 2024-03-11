@@ -39,6 +39,16 @@
             false=最新,true=全部
             </summary>
         </member>
+        <member name="P:MiniApi.Application.ScenicSpotModel.KeyWord">
+            <summary>
+            搜索关键字
+            </summary>
+        </member>
+        <member name="P:MiniApi.Application.ScenicSpotModel.cityName">
+            <summary>
+            城市名
+            </summary>
+        </member>
         <member name="P:MiniApi.Application.UsersLoginModel.UserName">
             <summary>
             姓名
@@ -139,6 +149,14 @@
             </summary>
             <param name="questionId"></param>
             <returns></returns>
+        </member>
+        <member name="M:MiniApi.Application.UsersQueries.RegisterUser(MiniApi.Application.UsersModel)">
+            <summary>
+            用户注册
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <exception cref="T:Juzhen.MiniProgramAPI.ServiceException"></exception>
         </member>
         <member name="M:MiniApi.Application.UsersQueries.Login(MiniApi.Application.UsersLoginModel)">
             <summary>
@@ -507,6 +525,20 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:AdminApi.Controllers.ScenicSpotsController.Get(MiniApi.Application.ScenicSpotModel)">
+            <summary>
+            获取景区列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.ScenicSpotsController.GetScenicSpotsById(System.Int32)">
+            <summary>
+            根据id获取景区
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="T:Juzhen.RoadProgramApp.Controllers.UploadController">
             <summary>
             七牛云
@@ -535,6 +567,13 @@
         <member name="M:Juzhen.MiniProgramAPI.IServiceCollectionExtensions.AddMyAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
             身份认证
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Juzhen.MiniProgramAPI.IServiceCollectionExtensions.AddMyUsersAccessor(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            解析用户详情
             </summary>
             <param name="services"></param>
             <returns></returns>

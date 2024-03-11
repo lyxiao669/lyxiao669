@@ -27,7 +27,7 @@ namespace MiniApi.Controllers
         /// <returns></returns>
         [HttpPost("Register")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<ActionResult> Register([FromQuery] UsersModel model)
+        public async Task<ActionResult> Register([FromBody] UsersModel model)
         {
 
             var result = await _usersQueries.RegisterUser(model);
@@ -45,7 +45,7 @@ namespace MiniApi.Controllers
         /// </summary>
         /// <param name="model">登录信息</param>
         /// <returns></returns>
-        [HttpPost("Login")]
+        [HttpGet("Login")]
         [ProducesResponseType(typeof(AccessTokenResult), (int)HttpStatusCode.OK)]
         public async Task<ActionResult> Login([FromQuery] UsersLoginModel model)
         {
@@ -60,7 +60,7 @@ namespace MiniApi.Controllers
         /// 获取用户详情
         /// </summary>
         /// <returns></returns>
-        [HttpGet]
+        [HttpGet("UserInfo")]
         [ProducesResponseType(typeof(UsersInfoResult), (int)HttpStatusCode.OK)]
         public async Task<ActionResult> GetUserDetails()
         {

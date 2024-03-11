@@ -13,11 +13,11 @@ namespace Applet.API.Infrastructure
         public string Password { get; private set; }
         public string Avatar { get; private set; }
 
-        public UsersAccessor(int id, string userName, string password, string avatar)
+        public UsersAccessor(int id, string userName,  string avatar)
         {
             Id = id;
             UserName = userName;
-            Password = password;
+            // Password = password;
             Avatar = avatar;
         }
         private readonly IHttpContextAccessor _httpContextAccessor;

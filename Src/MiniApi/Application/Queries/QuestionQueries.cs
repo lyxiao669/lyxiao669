@@ -479,8 +479,5 @@ namespace MiniApi.Application
 
             return resultList;
         }
-
-
-
     }
 }
