@@ -24,6 +24,7 @@ namespace Infrastructure
         public DbSet<UserVsion> UserVsions { get; set; }
         public DbSet<Users> Users { get; set; }
         public DbSet<ScenicSpots> ScenicSpots { get; set; }
+        public DbSet<Order> Order { get; set; }
     }
 
 }
