@@ -21,7 +21,7 @@ namespace Domain.Aggregates
 
         public DateTime OrderDate { get; set; }
 
-        private Order() { }
+        public Order() { }
 
         public Order(int userId, int spotId, int status)
         {

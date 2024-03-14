@@ -214,6 +214,11 @@
             </summary>
             <param name="compositePhoto"></param>
         </member>
+        <member name="T:Domain.Aggregates.Order">
+            <summary>
+            订单
+            </summary>
+        </member>
         <member name="T:Domain.Aggregates.Question">
             <summary>
             题库问题

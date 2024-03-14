@@ -107,6 +107,12 @@
             <param name="qRCode">二维码</param>
             <returns></returns>
         </member>
+        <member name="M:MiniApi.Application.OrderQueries.GetOrderDetailsByUserIdAsync">
+            <summary>
+            根据用户查询订单
+            </summary>
+            <returns>订单列表</returns>
+        </member>
         <member name="M:MiniApi.Application.PhotoQueries.GetPhotoListResultAsync(System.Int32)">
             <summary>
             照片墙
@@ -440,6 +446,19 @@
         <member name="M:MiniApi.Controllers.IdentityUsersController.Get">
             <summary>
             获取用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiniApi.Controllers.OrdersController.CreateOrder(MiniApi.Application.CreateOrderCommand)">
+            <summary>
+            创建订单
+            </summary>
+            <param name="command">创建订单的命令</param>
+            <returns>创建结果</returns>
+        </member>
+        <member name="M:MiniApi.Controllers.OrdersController.GetOrderDetails">
+            <summary>
+            获取订单列表
             </summary>
             <returns></returns>
         </member>
