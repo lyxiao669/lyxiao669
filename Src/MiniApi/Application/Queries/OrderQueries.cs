@@ -2,6 +2,7 @@ using Applet.API.Infrastructure;
 using Domain.Aggregates;
 using Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using MiniApi.Application.Queries;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -28,44 +29,50 @@ namespace MiniApi.Application
       var userId = _usersAccessor.Id;
       var user = await _context.Users.FindAsync(userId);
 
-      // 如果找不到用户，则直接返回空列表
       if (user == null)
       {
+        // 如果找不到用户，返回空列表
         return new List<OrderDetailWithSpotResult>();
       }
 
-      var orderDetails = await _context.Order
+      var orders = await _context.Order
           .Where(o => o.UserId == userId)
-          .Join(_context.ScenicSpots,
-                order => order.SpotId,
-                spot => spot.Id,
-                (order, spot) => new { order, spot })
-          .Select(joined => new OrderDetailWithSpotResult
-          {
-            OrderId = joined.order.Id,
-            OrderDate = joined.order.OrderDate,
-            Status = joined.order.Status,
-            UserId = userId, // 包含用户ID
-            UserName = user.UserName,
-            Avatar = user.Avatar,
-            SpotName = joined.spot.SpotName,
-            ProvinceName = joined.spot.ProvinceName,
-            CityName = joined.spot.CityName,
-            Likes = joined.spot.Likes,
-            Description = joined.spot.Description,
-            TicketPrice = joined.spot.TicketPrice,
-            Latitude = joined.spot.Latitude,
-            Longitude = joined.spot.Longitude,
-            Images = joined.spot.Images,
-            Address = joined.spot.Address,
-            Telephone = joined.spot.Telephone,
-            OpeningHours = joined.spot.OpeningHours
-          })
           .ToListAsync();
 
-      return orderDetails;
-    }
+      var orderDetailsList = new List<OrderDetailWithSpotResult>();
 
+      foreach (var order in orders)
+      {
+        var spot = await _context.ScenicSpots.FindAsync(order.SpotId);
+        if (spot != null)
+        {
+          var orderDetail = new OrderDetailWithSpotResult
+          {
+            OrderId = order.Id,
+            OrderDate = order.OrderDate,
+            Status = order.Status,
+            UserId = userId,
+            UserName = user.UserName,
+            Avatar = user.Avatar,
+            SpotName = spot.SpotName,
+            ProvinceName = spot.ProvinceName,
+            CityName = spot.CityName,
+            Likes = spot.Likes,
+            Description = spot.Description,
+            TicketPrice = spot.TicketPrice,
+            Latitude = spot.Latitude,
+            Longitude = spot.Longitude,
+            Images = spot.Images,
+            Address = spot.Address,
+            Telephone = spot.Telephone,
+            OpeningHours = spot.OpeningHours
+          };
+          orderDetailsList.Add(orderDetail);
+        }
+      }
+
+      return orderDetailsList;
+    }
 
 
   }

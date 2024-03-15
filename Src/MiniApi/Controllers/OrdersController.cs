@@ -44,8 +44,8 @@ namespace MiniApi.Controllers
         public async Task<ActionResult> GetOrderDetails()
         {
             var result = await _orderQueries.GetOrderDetailsByUserIdAsync();
-            // var result = await _mediator.Send(query);
             return Ok(result);
         }
+
     }
 }
