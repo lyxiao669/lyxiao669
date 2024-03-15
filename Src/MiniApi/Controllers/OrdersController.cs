@@ -15,10 +15,12 @@ namespace MiniApi.Controllers
         private readonly IMediator _mediator;
         private readonly OrderQueries _orderQueries;
 
-        public OrdersController(IMediator mediator)
+        public OrdersController(IMediator mediator, OrderQueries orderQueries)
         {
             _mediator = mediator;
+            _orderQueries = orderQueries;
         }
+
 
         /// <summary>
         /// 创建订单
