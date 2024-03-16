@@ -80,6 +80,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:MiniApi.Application.Queries.UserFavoriteQueries.GetFavoritesByUserIdAsync">
+            <summary>
+            根据用户查询收藏列表
+            </summary>
+            <returns>收藏列表</returns>
+        </member>
         <member name="M:MiniApi.Application.IdentityUserQueries.Login(MiniApi.Application.IdentiyUserModel)">
             <summary>
             登录
@@ -512,6 +518,26 @@
             </summary>
             <param name="command"></param>
             <returns></returns>
+        </member>
+        <member name="M:MiniApi.Controllers.UserFavoritesController.AddToFavorites(MiniApi.Application.AddToFavoritesCommand)">
+            <summary>
+            添加收藏
+            </summary>
+            <param name="command">添加收藏的命令</param>
+            <returns>添加结果</returns>
+        </member>
+        <member name="M:MiniApi.Controllers.UserFavoritesController.QueryFavorites">
+            <summary>
+            查询用户收藏
+            </summary>
+            <returns>收藏列表</returns>
+        </member>
+        <member name="M:MiniApi.Controllers.UserFavoritesController.DeleteFavorite(System.Int32)">
+            <summary>
+            删除收藏
+            </summary>
+            <param name="id">收藏ID</param>
+            <returns>删除结果</returns>
         </member>
         <member name="M:MiniApi.Controllers.UsersController.Register(MiniApi.Application.UsersModel)">
             <summary>

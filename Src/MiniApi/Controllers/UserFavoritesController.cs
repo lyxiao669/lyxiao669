@@ -53,16 +53,20 @@ namespace MiniApi.Controllers
         /// <summary>
         /// 删除收藏
         /// </summary>
-        /// <param name="favoriteId">收藏ID</param>
+        /// <param name="id">收藏ID</param>
         /// <returns>删除结果</returns>
-        // [HttpDelete("{favoriteId}")]
-        // [Authorize]
-        // [ProducesResponseType((int)HttpStatusCode.OK)]
-        // public async Task<ActionResult> DeleteFavorite(int favoriteId)
-        // {
-        //     // var command = new DeleteFavoriteCommand { FavoriteId = favoriteId };
-        //     var result = await _mediator.Send(command);
-        //     return Ok(result);
-        // }
+        [HttpDelete("{favoriteId}")]
+        [Authorize]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        public async Task<ActionResult> DeleteFavorite(int id)
+        {
+            var command = new RemoveFavoriteCommand { SpotId = id };
+            var result = await _mediator.Send(command);
+            if (result.Success)
+            {
+                return Ok();
+            }
+            return Ok(result);
+        }
     }
 }

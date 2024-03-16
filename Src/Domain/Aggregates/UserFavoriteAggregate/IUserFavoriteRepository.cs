@@ -12,7 +12,6 @@ namespace Domain.Aggregates
         void Delete(UserFavorite userFavorite);
 
         Task<UserFavorite> GetAsync(int id);
-        void IsFavorite(UserFavorite userFavorite);
-
+        Task<bool> IsFavorite(int userId, int spotId);
     }
 }

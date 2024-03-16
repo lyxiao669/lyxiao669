@@ -23,8 +23,8 @@ namespace MiniApi.Application
             var userId = _usersAccessor.Id; // 获取当前用户ID
 
             // 检查是否已收藏
-            var existingFavorite = await _favoriteRepository.IsFavorite(userId, request.SpotId);
-            if (existingFavorite != null)
+            var isAlreadyFavorite = await _favoriteRepository.IsFavorite(userId, request.Id);
+            if (isAlreadyFavorite)
             {
                 return new AddToFavoritesResult
                 {
@@ -36,7 +36,7 @@ namespace MiniApi.Application
             var favorite = new UserFavorite
             {
                 UserId = userId,
-                SpotId = request.SpotId
+                SpotId = request.Id
             };
 
             _favoriteRepository.Add(favorite);
@@ -49,5 +49,6 @@ namespace MiniApi.Application
                 Message = "收藏成功",
             };
         }
+
     }
 }

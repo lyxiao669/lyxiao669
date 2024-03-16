@@ -35,5 +35,10 @@ namespace Infrastructure.Repositories
         {
             _context.UserFavorites.Update(userFavorite);
         }
+
+        public async Task<bool> IsFavorite(int userId, int spotId)
+        {
+            return await _context.UserFavorites.AnyAsync(f => f.UserId == userId && f.SpotId == spotId);
+        }
     }
 }
