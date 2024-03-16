@@ -314,6 +314,11 @@
             创建时间
             </summary>
         </member>
+        <member name="T:Domain.Aggregates.UserFavorite">
+            <summary>
+            用户收藏
+            </summary>
+        </member>
         <member name="T:Domain.Aggregates.Users">
             <summary>
             轮播图

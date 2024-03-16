@@ -16,7 +16,9 @@ namespace Domain.Aggregates
         public int SpotId { get; set; }
 
         public DateTime Timestamp { get; set; }
-
+       // 导航属性
+        public virtual Users User { get; set; }
+        public virtual ScenicSpots ScenicSpot { get; set; }
         public UserFavorite() { }
 
         public UserFavorite(int userId, int spotId)
@@ -25,5 +27,6 @@ namespace Domain.Aggregates
             SpotId = spotId;
             Timestamp = DateTime.Now;
         }
+        
     }
 }
