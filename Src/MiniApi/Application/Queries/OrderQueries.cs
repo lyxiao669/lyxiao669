@@ -23,8 +23,9 @@ namespace MiniApi.Application
     /// <summary>
     /// 根据用户查询订单
     /// </summary>
+    /// <param name="status">订单状态，当为null、空或-1时返回所有状态的订单</param>
     /// <returns>订单列表</returns>
-    public async Task<List<OrderDetailWithSpotResult>> GetOrderDetailsByUserIdAsync()
+    public async Task<List<OrderDetailWithSpotResult>> GetOrderDetailsByUserIdAsync(int? status)
     {
       var userId = _usersAccessor.Id;
       var user = await _context.Users.FindAsync(userId);
@@ -35,12 +36,16 @@ namespace MiniApi.Application
         return new List<OrderDetailWithSpotResult>();
       }
 
-      var orders = await _context.Order
-          .Where(o => o.UserId == userId)
-          .ToListAsync();
+      // 根据状态过滤订单，如果状态为null、空或-1，则返回所有订单
+      IQueryable<Order> ordersQuery = _context.Order.Where(o => o.UserId == userId);
+      if (status.HasValue && status.Value >= 0)
+      {
+        ordersQuery = ordersQuery.Where(o => o.Status == status.Value);
+      }
+
+      var orders = await ordersQuery.ToListAsync();
 
       var orderDetailsList = new List<OrderDetailWithSpotResult>();
-
       foreach (var order in orders)
       {
         var spot = await _context.ScenicSpots.FindAsync(order.SpotId);
@@ -73,6 +78,7 @@ namespace MiniApi.Application
 
       return orderDetailsList;
     }
+
 
 
   }

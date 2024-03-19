@@ -20,9 +20,9 @@ namespace MiniApi.Application.Queries
         }
 
         /// <summary>
-        /// 根据用户查询收藏列表
+        /// 根据用户查询收藏列表，包括景区的详细信息
         /// </summary>
-        /// <returns>收藏列表</returns>
+        /// <returns>收藏列表，包含景区的详细信息</returns>
         public async Task<List<FavoriteDetailResult>> GetFavoritesByUserIdAsync()
         {
             var userId = _usersAccessor.Id;
@@ -36,28 +36,47 @@ namespace MiniApi.Application.Queries
 
             var favorites = await _context.UserFavorites
                 .Where(f => f.UserId == userId)
-                .Include(f => f.ScenicSpot)
-                .Select(f => new FavoriteDetailResult
-                {
-                    FavoriteId = f.Id,
-                    UserName = user.UserName,
-                    Avatar = user.Avatar,
-                    SpotName = f.ScenicSpot.SpotName,
-                    ProvinceName = f.ScenicSpot.ProvinceName,
-                    CityName = f.ScenicSpot.CityName,
-                    Likes = f.ScenicSpot.Likes,
-                    Description = f.ScenicSpot.Description,
-                    TicketPrice = f.ScenicSpot.TicketPrice,
-                    Latitude = f.ScenicSpot.Latitude,
-                    Longitude = f.ScenicSpot.Longitude,
-                    Images = f.ScenicSpot.Images,
-                    Address = f.ScenicSpot.Address,
-                    Telephone = f.ScenicSpot.Telephone,
-                    OpeningHours = f.ScenicSpot.OpeningHours,
-                })
                 .ToListAsync();
 
-            return favorites;
+            var favoriteDetailsList = new List<FavoriteDetailResult>();
+
+            foreach (var favorite in favorites)
+            {
+                var spot = await _context.ScenicSpots.FindAsync(favorite.SpotId);
+                if (spot != null)
+                {
+                    var favoriteDetail = new FavoriteDetailResult
+                    {
+                        FavoriteId = favorite.Id,
+                        UserId = userId,
+                        UserName = user.UserName,
+                        Avatar = user.Avatar,
+                        SpotId = spot.Id,
+                        SpotName = spot.SpotName,
+                        ProvinceName = spot.ProvinceName,
+                        CityName = spot.CityName,
+                        Likes = spot.Likes,
+                        Description = spot.Description,
+                        TicketPrice = spot.TicketPrice,
+                        Latitude = spot.Latitude,
+                        Longitude = spot.Longitude,
+                        Images = spot.Images,
+                        Address = spot.Address,
+                        Telephone = spot.Telephone,
+                        OpeningHours = spot.OpeningHours
+                    };
+                    favoriteDetailsList.Add(favoriteDetail);
+                }
+            }
+
+            return favoriteDetailsList;
         }
+
+        public async Task<bool> IsFavoriteAsync( int spotId)
+        {
+            var userId = _usersAccessor.Id;
+            return await _context.UserFavorites.AnyAsync(f => f.UserId == userId && f.SpotId == spotId);
+        }
+
     }
 }

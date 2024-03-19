@@ -5,7 +5,7 @@ namespace MiniApi.Application
 
   public class AddToFavoritesCommand: IRequest<AddToFavoritesResult>
   {
-    public int Id { get; set; }
+    public int SpotId { get; set; }
   }
   public class AddToFavoritesResult
   {

@@ -1,11 +1,16 @@
+using Domain.Aggregates;
 using System;
-using MediatR;
+using System.Collections.Generic;
 
-namespace MiniApi.Application
+namespace AdminApi.Application
 {
-  public class FavoriteDetailResult
+  public class OrderDetailResult
   {
-    public int FavoriteId { get; set; }
+    public int Id { get; set; }
+
+    public int Status { get; set; }
+
+    public DateTime OrderDate { get; set; }
 
     public int UserId { get; set; }
     public string UserName { get; set; }
@@ -27,5 +32,4 @@ namespace MiniApi.Application
     public string OpeningHours { get; set; }
     public DateTime Timestamp { get; set; }
   }
-
 }

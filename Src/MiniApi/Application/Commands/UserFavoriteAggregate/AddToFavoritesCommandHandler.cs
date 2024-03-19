@@ -10,11 +10,13 @@ namespace MiniApi.Application
     public class AddToFavoritesCommandHandler : IRequestHandler<AddToFavoritesCommand, AddToFavoritesResult>
     {
         private readonly IUserFavoriteRepository _favoriteRepository;
+        private readonly IScenicSpotsRepository _scenicSpotRepository;
         private readonly UsersAccessor _usersAccessor;
 
-        public AddToFavoritesCommandHandler(IUserFavoriteRepository favoriteRepository, UsersAccessor usersAccessor)
+        public AddToFavoritesCommandHandler(IUserFavoriteRepository favoriteRepository, IScenicSpotsRepository scenicSpotRepository, UsersAccessor usersAccessor)
         {
             _favoriteRepository = favoriteRepository;
+            _scenicSpotRepository = scenicSpotRepository;
             _usersAccessor = usersAccessor;
         }
 
@@ -23,7 +25,7 @@ namespace MiniApi.Application
             var userId = _usersAccessor.Id; // 获取当前用户ID
 
             // 检查是否已收藏
-            var isAlreadyFavorite = await _favoriteRepository.IsFavorite(userId, request.Id);
+            var isAlreadyFavorite = await _favoriteRepository.IsFavorite(userId, request.SpotId);
             if (isAlreadyFavorite)
             {
                 return new AddToFavoritesResult
@@ -33,15 +35,32 @@ namespace MiniApi.Application
                 };
             }
 
+            // 获取景点对象
+            var scenicSpot = await _scenicSpotRepository.GetAsync(request.SpotId);
+            if (scenicSpot == null)
+            {
+                return new AddToFavoritesResult
+                {
+                    Success = false,
+                    Message = "未找到该景点",
+                };
+            }
+
+            // 增加景点的Likes数量
+            scenicSpot.Likes += 1;
+            _scenicSpotRepository.Update(scenicSpot);
+
             var favorite = new UserFavorite
             {
                 UserId = userId,
-                SpotId = request.Id
+                SpotId = request.SpotId,
+                Timestamp = DateTime.Now
             };
 
             _favoriteRepository.Add(favorite);
             await _favoriteRepository.UnitOfWork.SaveEntitiesAsync(cancellationToken);
-
+            _scenicSpotRepository.Update(scenicSpot);
+            await _scenicSpotRepository.UnitOfWork.SaveEntitiesAsync(cancellationToken);
             return new AddToFavoritesResult
             {
                 FavoriteId = favorite.Id,
@@ -49,6 +68,7 @@ namespace MiniApi.Application
                 Message = "收藏成功",
             };
         }
+
 
     }
 }

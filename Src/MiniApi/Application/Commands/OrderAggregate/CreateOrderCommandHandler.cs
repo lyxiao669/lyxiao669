@@ -27,7 +27,6 @@ namespace MiniApi.Application
             {
                 UserId = userId,
                 SpotId = request.SpotId,
-                // Status = request.Status,
                 Status = 0,
                 OrderDate = DateTime.Now
             };
@@ -39,7 +38,9 @@ namespace MiniApi.Application
             return new CreateOrderResult
             {
                 OrderId = order.Id,
-                Message = "订单创建成功"
+                Success = true,
+                Message = "订单创建成功",
+                
             };
         }
     }

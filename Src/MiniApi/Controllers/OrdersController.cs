@@ -43,9 +43,22 @@ namespace MiniApi.Controllers
         [HttpGet]
         [Authorize]
         [ProducesResponseType(typeof(OrderDetailWithSpotResult), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult> GetOrderDetails()
+        public async Task<ActionResult> GetOrderDetails(int status)
         {
-            var result = await _orderQueries.GetOrderDetailsByUserIdAsync();
+            var result = await _orderQueries.GetOrderDetailsByUserIdAsync(status);
+            return Ok(result);
+        }
+
+        /// <summary>
+        /// 取消订单
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost("Cancel")]
+        [Authorize]
+        [ProducesResponseType(typeof(CanceleOrderResult), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult> CancelOrder(CancelOrderCommand command)
+        {
+            var result = await _mediator.Send(command);
             return Ok(result);
         }
 

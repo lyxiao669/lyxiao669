@@ -401,6 +401,13 @@
             <param name="model"></param>
             <returns></returns>
         </member>
+        <member name="M:AdminApi.Application.Queries.OrderQueries.GetOrdersListAsync(AdminApi.Application.PageModel)">
+            <summary>
+            查询订单列表，包含用户和景点信息
+            </summary>
+            <param name="model">分页模型</param>
+            <returns>包含用户和景点信息的订单列表</returns>
+        </member>
         <member name="M:AdminApi.Application.Queries.UserVsionQueries.GetUserVsionListAsync(AdminApi.Application.UserVsionModel)">
             <summary>
             用户视力列表
@@ -543,6 +550,32 @@
             删除轮播图
             </summary>
             <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AdminApi.Controllers.OrdersController">
+            <summary>
+            订单控制器
+            </summary>
+        </member>
+        <member name="M:AdminApi.Controllers.OrdersController.UpdateStatus(AdminApi.Application.Commands.UpdateOrderStatusCommand)">
+            <summary>
+            更新订单状态
+            </summary>
+            <param name="command">更新订单状态命令</param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.OrdersController.Get(AdminApi.Application.PageModel)">
+            <summary>
+            查询订单列表
+            </summary>
+            <param name="model">分页模型</param>
+            <returns>订单列表</returns>
+        </member>
+        <member name="M:AdminApi.Controllers.OrdersController.Delete(System.Int32)">
+            <summary>
+            删除订单
+            </summary>
+            <param name="id">订单ID</param>
             <returns></returns>
         </member>
         <member name="T:AdminApi.Controllers.QuestionBanksController">

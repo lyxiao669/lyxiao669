@@ -51,16 +51,31 @@ namespace MiniApi.Controllers
         }
 
         /// <summary>
-        /// 删除收藏
+        /// 检查用户是否已收藏
         /// </summary>
-        /// <param name="id">收藏ID</param>
-        /// <returns>删除结果</returns>
-        [HttpDelete("{favoriteId}")]
+        /// <param name="spotId"></param>
+        /// <returns></returns>
+        [HttpGet("CheckFavorite")]
         [Authorize]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<ActionResult> DeleteFavorite(int id)
+        public async Task<ActionResult<bool>> CheckFavorite(int spotId)
         {
-            var command = new RemoveFavoriteCommand { SpotId = id };
+            var result = await _favoriteQueries.IsFavoriteAsync(spotId);
+            return Ok(result);
+        }
+
+
+        /// <summary>
+        /// 删除收藏
+        /// </summary>
+        /// <param name="command">收藏ID</param>
+        /// <returns>删除结果</returns>
+        [HttpPost("Delete")]
+        [Authorize]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        public async Task<ActionResult> DeleteFavorite(RemoveFavoriteCommand command)
+        {
+            // var command = new RemoveFavoriteCommand { SpotId = spotId };
             var result = await _mediator.Send(command);
             if (result.Success)
             {

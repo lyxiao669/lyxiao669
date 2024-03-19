@@ -11,7 +11,7 @@ namespace Domain.Aggregates
     [Table("Orders")]
     public class Order : AggregateRoot
     {
-        public byte[] Timestamp { get; set; }
+        // public DateTime Timestamp { get; set; }
 
         public int UserId { get; set; }
 
