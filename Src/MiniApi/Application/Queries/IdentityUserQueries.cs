@@ -111,21 +111,5 @@ namespace MiniApi.Application
             return data;
         }
 
-
-        /// <summary>
-        /// 二维码获取用户信息
-        /// </summary>
-        /// <param name="qRCode">二维码</param>
-        /// <returns></returns>
-        public async Task<UserInformationResult> GetUserInfo(string qRCode)
-        {
-            var user = await _context.IdentityUsers.Where(a=>a.QRCode==qRCode)
-                .FirstOrDefaultAsync();
-
-            var result= user.Map();
-
-            return result;
-        }
-
     }
 }

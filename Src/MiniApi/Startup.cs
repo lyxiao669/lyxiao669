@@ -49,10 +49,6 @@ namespace MiniApi
             services.AddIdWorker();
             services.AddScoped(typeof(IPipelineBehavior<,>), typeof(TransactionBehaviour<,>));
             services.AddMediatR(GetType().Assembly);
-            services.AddAutoMapper(c =>
-            {
-                c.AddProfile<AllProfile>();
-            });
             services.AddDbContext<ApplicationDbContext>(s =>
             {
                 var conStr = Configuration.GetConnectionString("MySql");
