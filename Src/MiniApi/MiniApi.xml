@@ -49,26 +49,6 @@
             头像
             </summary>
         </member>
-        <member name="M:MiniApi.Application.IdentityUserQueries.Login(MiniApi.Application.IdentiyUserModel)">
-            <summary>
-            登录
-            </summary>
-            <param name="model"></param>
-            <returns></returns>
-        </member>
-        <member name="M:MiniApi.Application.IdentityUserQueries.GetUserInfo">
-            <summary>
-            获取用户详情
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:MiniApi.Application.IdentityUserQueries.GetQrcodeUserInfo(System.String)">
-            <summary>
-            二维码获取用户Token
-            </summary>
-            <param name="qRCode">二维码</param>
-            <returns></returns>
-        </member>
         <member name="M:MiniApi.Application.OrderQueries.GetOrderDetailsByUserIdAsync(System.Nullable{System.Int32})">
             <summary>
             根据用户查询订单
@@ -104,79 +84,9 @@
             <returns></returns>
             <exception cref="T:Juzhen.MiniProgramAPI.ServiceException"></exception>
         </member>
-        <member name="P:MiniApi.Application.AccessTokenResult.AccessToken">
+        <member name="P:MiniApi.Application.Results.Users.AccessTokenResult.AccessToken">
             <summary>
             令牌
-            </summary>
-        </member>
-        <member name="P:MiniApi.Application.UserinfoResult.FullName">
-            <summary>
-            姓名
-            </summary>
-        </member>
-        <member name="P:MiniApi.Application.UserinfoResult.Mobile">
-            <summary>
-            手机号
-            </summary>
-        </member>
-        <member name="P:MiniApi.Application.UserinfoResult.School">
-            <summary>
-            学校
-            </summary>
-        </member>
-        <member name="P:MiniApi.Application.UserinfoResult.Grade">
-            <summary>
-            年级
-            </summary>
-        </member>
-        <member name="P:MiniApi.Application.UserinfoResult.QrCodeImg">
-            <summary>
-            二维码图片
-            </summary>
-        </member>
-        <member name="P:MiniApi.Application.UserinfoResult.Photo">
-            <summary>
-            照片
-            </summary>
-        </member>
-        <member name="P:MiniApi.Application.UserinfoResult.CompositePhoto">
-            <summary>
-            合成照片
-            </summary>
-        </member>
-        <member name="P:MiniApi.Application.UserinfoResult.IsPhoto">
-            <summary>
-            是否拍过照片
-            </summary>
-        </member>
-        <member name="P:MiniApi.Application.UserInformationResult.FullName">
-            <summary>
-            姓名
-            </summary>
-        </member>
-        <member name="P:MiniApi.Application.UserInformationResult.Mobile">
-            <summary>
-            手机号
-            </summary>
-        </member>
-        <member name="P:MiniApi.Application.UserInformationResult.Grade">
-            <summary>
-            年级
-            </summary>
-        </member>
-        <member name="P:MiniApi.Application.UserInformationResult.IsSee">
-            <summary>
-            是否使用机器看过
-            </summary>
-        </member>
-        <member name="P:MiniApi.Application.UserInformationResult.Photo">
-            <summary>
-            照片
-            </summary>
-        </member>
-        <member name="P:MiniApi.Application.UserInformationResult.CompositePhoto">
-            <summary>
-            合成照片
             </summary>
         </member>
         <member name="P:MiniApi.Application.UsersInfoResult.UserName">
@@ -212,29 +122,6 @@
             <summary>
             移除的照片
             </summary>
-        </member>
-        <member name="T:MiniApi.Controllers.IdentityUsersController">
-            <summary>
-            用户模块
-            </summary>
-        </member>
-        <member name="M:MiniApi.Controllers.IdentityUsersController.Login(MiniApi.Application.IdentiyUserModel)">
-            <summary>
-            小程序用户登录
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:MiniApi.Controllers.IdentityUsersController.Get(System.String)">
-            <summary>
-            扫码登录（扫码获取token）
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:MiniApi.Controllers.IdentityUsersController.Get">
-            <summary>
-            获取用户信息
-            </summary>
-            <returns></returns>
         </member>
         <member name="M:MiniApi.Controllers.OrdersController.CreateOrder(MiniApi.Application.CreateOrderCommand)">
             <summary>
@@ -449,72 +336,6 @@
             <summary>
             上传文件到本地
             </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Juzhen.Infrastructur.ImgUtil.UploadQrCode(System.String,System.String)">
-            <summary>
-            生成二维码合成图片
-            </summary>
-            <param name="qrcode"></param>
-            /// <param name="fullName"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Juzhen.Infrastructur.ImgUtil.UploadImg(System.String,System.String,System.String)">
-            <summary>
-            两张图片合成
-            </summary>
-            <param name="img">需要合成进去的图</param>
-            <param name="backgroundImg">背景图</param>
-            <param name="photo">照片</param>
-            <returns></returns>
-        </member>
-        <member name="M:Juzhen.Infrastructur.ImgUtil.CreateQR(System.String,System.String)">
-            <summary>
-            合成二维码加文字图片
-            </summary>
-            <param name="nr">生成二维码字段</param>
-            <param name="fullName">文字内容</param>
-            <returns></returns>
-        </member>
-        <member name="M:Juzhen.Infrastructur.ImgUtil.CreateImg(System.String,System.String,System.String)">
-            <summary>
-            几张图片合成
-            </summary>
-            <param name="img">需要合成进去的图</param>
-            <param name="backgroundImg">背景图</param>
-            <param name="photo">照片</param>
-            <returns></returns>
-        </member>
-        <member name="M:Juzhen.Infrastructur.ImgUtil.TextToBitmap(System.String,System.Drawing.Font)">
-            <summary>
-            把文字转换成Bitmap
-            </summary>
-            <param name="text"></param>
-            <param name="font"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Juzhen.Infrastructur.ImgUtil.PictureAddText(System.String,System.String,System.String)">
-            <summary>
-            创建合成图片
-            </summary>
-            <param name="desc">文字内容</param>
-            <param name="background">背景图片</param>
-            <param name="qrCode">二维码</param>
-        </member>
-        <member name="M:Juzhen.Infrastructur.ImgUtil.PictureAdd(System.String,System.String,System.String)">
-            <summary>
-            图片合成
-            </summary>
-            <param name="imgs">图片或者二维码</param>
-            <param name="background">背景图片</param>
-            <param name="photo">照片</param>
-            <returns></returns>
-        </member>
-        <member name="M:Juzhen.Infrastructur.ImgUtil.GetImageBytes(System.Drawing.Image)">
-            <summary>
-            图片装二进制流
-            </summary>
-            <param name="image"></param>
             <returns></returns>
         </member>
         <member name="M:Juzhen.Infrastructur.ImgUtil.UpoladImage(Juzhen.Infrastructur.ImgUtil.UploadModel)">

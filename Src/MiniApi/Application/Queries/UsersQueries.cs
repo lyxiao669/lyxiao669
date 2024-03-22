@@ -3,13 +3,13 @@ using Domain.Aggregates;
 using Infrastructure;
 using Juzhen.MiniProgramAPI;
 using Juzhen.MiniProgramAPI.Infrastructure;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using MiniApi.Application.Results.Users;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+
 
 namespace MiniApi.Application
 {

@@ -1,4 +1,4 @@
-﻿namespace MiniApi.Application
+﻿namespace MiniApi.Application.Results.Users
 {
     public class AccessTokenResult
     {

@@ -6,9 +6,6 @@ namespace Infrastructure
 {
     public partial class ApplicationDbContext
     {
-        public DbSet<IdentityUser> IdentityUsers { get; set; }
-
-      
         public DbSet<Users> Users { get; set; }
         public DbSet<ScenicSpots> ScenicSpots { get; set; }
         public DbSet<Order> Order { get; set; }
