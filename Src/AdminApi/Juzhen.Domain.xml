@@ -4,6 +4,120 @@
         <name>Domain</name>
     </assembly>
     <members>
+        <member name="T:Domain.Aggregates.Feedback">
+            <summary>
+            用户反馈
+            </summary>
+        </member>
+        <member name="T:Domain.Aggregates.IdentityUser">
+            <summary>
+            用户表
+            </summary>
+        </member>
+        <member name="P:Domain.Aggregates.IdentityUser.Timestamp">
+            <summary>
+            并发控制
+            </summary>
+        </member>
+        <member name="P:Domain.Aggregates.IdentityUser.FullName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Domain.Aggregates.IdentityUser.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:Domain.Aggregates.IdentityUser.School">
+            <summary>
+            学校
+            </summary>
+        </member>
+        <member name="P:Domain.Aggregates.IdentityUser.Grade">
+            <summary>
+            年级
+            </summary>
+        </member>
+        <member name="P:Domain.Aggregates.IdentityUser.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:Domain.Aggregates.IdentityUser.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Domain.Aggregates.IdentityUser.QRCode">
+            <summary>
+            二维码
+            </summary>
+        </member>
+        <member name="P:Domain.Aggregates.IdentityUser.QrCodeImg">
+            <summary>
+            二维码图片
+            </summary>
+        </member>
+        <member name="P:Domain.Aggregates.IdentityUser.IsQrCode">
+            <summary>
+            是否生成二维码图片
+            </summary>
+        </member>
+        <member name="P:Domain.Aggregates.IdentityUser.Photo">
+            <summary>
+            照片
+            </summary>
+        </member>
+        <member name="P:Domain.Aggregates.IdentityUser.CompositePhoto">
+            <summary>
+            合成照片
+            </summary>
+        </member>
+        <member name="P:Domain.Aggregates.IdentityUser.IsPhoto">
+            <summary>
+            是否拍过
+            </summary>
+        </member>
+        <member name="P:Domain.Aggregates.IdentityUser.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:Domain.Aggregates.IdentityUser.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="M:Domain.Aggregates.IdentityUser.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            导入学生数据
+            </summary>
+            <param name="fullName"></param>
+            <param name="mobile"></param>
+            <param name="school"></param>
+            <param name="grade"></param>
+            <param name="age"></param>
+            <param name="gender"></param>
+        </member>
+        <member name="M:Domain.Aggregates.IdentityUser.Update(System.String)">
+            <summary>
+            生成二维码
+            </summary>
+            <param name="qRCode"></param>
+        </member>
+        <member name="M:Domain.Aggregates.IdentityUser.AddQrCodeImg(System.String)">
+            <summary>
+            生成二维码图片
+            </summary>
+            <param name="qrCodeImg"></param>
+        </member>
+        <member name="M:Domain.Aggregates.IdentityUser.CompositePhotos(System.String)">
+            <summary>
+            合成照片
+            </summary>
+            <param name="compositePhoto"></param>
+        </member>
         <member name="T:Domain.Aggregates.Order">
             <summary>
             订单

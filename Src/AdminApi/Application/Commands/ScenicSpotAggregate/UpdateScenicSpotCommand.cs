@@ -17,5 +17,6 @@ namespace AdminApi.Application.Commands.ScenicSpotsAggregate
         public string Address { get; set; }
         public string Telephone { get; set; }
         public string OpeningHours { get; set; }
+        public string Notice { get; set; }
     }
 }

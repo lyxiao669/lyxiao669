@@ -32,6 +32,7 @@ namespace AdminApi.Application.Commands.ScenicSpotsAggregate
             scenicSpot.Address = request.Address;
             scenicSpot.Telephone = request.Telephone;
             scenicSpot.OpeningHours = request.OpeningHours;
+            scenicSpot.Notice = request.Notice;
             
             _scenicSpotRepository.Update(scenicSpot);
             await _scenicSpotRepository.UnitOfWork.SaveEntitiesAsync(cancellationToken);

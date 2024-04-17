@@ -31,6 +31,7 @@ namespace AdminApi.Application.Commands.ScenicSpotsAggregate
                 Address = request.Address,
                 Telephone = request.Telephone,
                 OpeningHours = request.OpeningHours,
+                Notice = request.Notice
                 
             };
             _scenicSpotRepository.Add(scenicSpot);

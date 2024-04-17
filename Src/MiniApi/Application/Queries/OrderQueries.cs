@@ -53,6 +53,7 @@ namespace MiniApi.Application
         {
           var orderDetail = new OrderDetailWithSpotResult
           {
+            spotId = order.SpotId,
             OrderId = order.Id,
             OrderDate = order.OrderDate,
             Status = order.Status,

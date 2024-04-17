@@ -31,10 +31,11 @@ namespace Domain.Aggregates
         public string Telephone { get; set; }
 
         public string OpeningHours { get; set; }
+        public string Notice { get; set; }
 
         public ScenicSpots(){}
 
-        public ScenicSpots(string spotName, string provinceName, string cityName, string description, decimal ticketPrice, double latitude, double longitude, string images, string address, string telephone, string openingHours) :this()
+        public ScenicSpots(string spotName, string provinceName, string cityName, string description, decimal ticketPrice, double latitude, double longitude, string images, string address, string telephone, string openingHours,string notice) :this()
         {
             SpotName = spotName;
             ProvinceName = provinceName;
@@ -47,8 +48,9 @@ namespace Domain.Aggregates
             Address = address;
             Telephone = telephone;
             OpeningHours = openingHours;
+            Notice = notice;
         }
-        public void update(string spotName,string provinceName, string cityName, string description, decimal ticketPrice, double latitude, double longitude, string images,string address, string telephone, string openingHours)
+        public void update(string spotName,string provinceName, string cityName, string description, decimal ticketPrice, double latitude, double longitude, string images,string address, string telephone, string openingHours,string notice)
         {
             SpotName = spotName;
             ProvinceName = provinceName;
@@ -61,6 +63,7 @@ namespace Domain.Aggregates
             Address = address;
             Telephone = telephone;
             OpeningHours = openingHours;
+            Notice = notice;
         }
 
     }

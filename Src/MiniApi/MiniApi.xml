@@ -4,16 +4,6 @@
         <name>MiniApi</name>
     </assembly>
     <members>
-        <member name="P:MiniApi.Application.IdentiyUserModel.FullName">
-            <summary>
-            姓名
-            </summary>
-        </member>
-        <member name="P:MiniApi.Application.IdentiyUserModel.Mobile">
-            <summary>
-            手机号
-            </summary>
-        </member>
         <member name="P:MiniApi.Application.ScenicSpotModel.KeyWord">
             <summary>
             搜索关键字
@@ -48,6 +38,12 @@
             <summary>
             头像
             </summary>
+        </member>
+        <member name="M:MiniApi.Application.FeedbackQueries.GetFeedbackDetailsByUserIdAsync">
+            <summary>
+            根据用户ID查询反馈
+            </summary>
+            <returns>反馈详情列表</returns>
         </member>
         <member name="M:MiniApi.Application.OrderQueries.GetOrderDetailsByUserIdAsync(System.Nullable{System.Int32})">
             <summary>
@@ -122,6 +118,19 @@
             <summary>
             移除的照片
             </summary>
+        </member>
+        <member name="M:MiniApi.Controllers.FeedbackController.CreateFeedback(MiniApi.Application.CreateFeedbackCommand)">
+            <summary>
+            创建反馈
+            </summary>
+            <param name="command">创建反馈的命令</param>
+            <returns>创建结果</returns>
+        </member>
+        <member name="M:MiniApi.Controllers.FeedbackController.GetFeedbackDetails">
+            <summary>
+            获取当前用户的反馈列表
+            </summary>
+            <returns>反馈详情列表</returns>
         </member>
         <member name="M:MiniApi.Controllers.OrdersController.CreateOrder(MiniApi.Application.CreateOrderCommand)">
             <summary>

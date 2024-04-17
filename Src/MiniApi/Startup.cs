@@ -28,7 +28,7 @@ namespace MiniApi
         {
             Configuration = configuration;
 
-            //��ţ�������
+            //七牛云配置
             string qiniu_accesskey = Configuration.GetValue<string>("QiniuStrings:accesskey");
             string qiniu_secretkey = Configuration.GetValue<string>("QiniuStrings:secretkey");
             string qiniu_domain = Configuration.GetValue<string>("QiniuStrings:domain");

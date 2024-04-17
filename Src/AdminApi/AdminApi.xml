@@ -94,12 +94,45 @@
             关键字
             </summary>
         </member>
+        <member name="M:AdminApi.Application.Queries.FeedbackQueries.GetFeedbackListAsync(AdminApi.Application.PageModel)">
+            <summary>
+            查询反馈列表，按创建时间降序
+            </summary>
+            <param name="model">分页模型</param>
+            <returns>反馈列表</returns>
+        </member>
         <member name="M:AdminApi.Application.Queries.OrderQueries.GetOrdersListAsync(AdminApi.Application.PageModel)">
             <summary>
             查询订单列表，包含用户和景点信息
             </summary>
             <param name="model">分页模型</param>
             <returns>包含用户和景点信息的订单列表</returns>
+        </member>
+        <member name="T:AdminApi.Controllers.FeedbackController">
+            <summary>
+            反馈控制器
+            </summary>
+        </member>
+        <member name="M:AdminApi.Controllers.FeedbackController.Get(AdminApi.Application.PageModel)">
+            <summary>
+            查询反馈列表
+            </summary>
+            <param name="model">分页模型</param>
+            <returns>反馈列表</returns>
+        </member>
+        <member name="M:AdminApi.Controllers.FeedbackController.Delete(System.Int32)">
+            <summary>
+            删除反馈
+            </summary>
+            <param name="id">反馈ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:AdminApi.Controllers.FeedbackController.UpdateStatus(AdminApi.Application.Commands.UpdateFeedbackStatusCommand)">
+            <summary>
+            更新反馈状态
+            </summary>
+            <param name="command">更新状态的命令</param>
+            <returns></returns>
         </member>
         <member name="T:AdminApi.Controllers.OrdersController">
             <summary>

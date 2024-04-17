@@ -4,8 +4,6 @@ using System.Net;
 using System.Threading.Tasks;
 using MiniApi.Application;
 using MiniApi.Application.Results.Users;
-// 确保这里的命名空间正确指向您的UsersQueries所在的命名空间
-
 namespace MiniApi.Controllers
 {
     [Route("[controller]")]
