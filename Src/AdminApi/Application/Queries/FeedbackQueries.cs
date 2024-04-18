@@ -22,10 +22,11 @@ namespace AdminApi.Application.Queries
         /// </summary>
         /// <param name="model">分页模型</param>
         /// <returns>反馈列表</returns>
-        public async Task<PageResult<FeedbackDetailResult>> GetFeedbackListAsync(PageModel model)
+        public async Task<PageResult<FeedbackDetailResult>> GetFeedbackListAsync(FeedbackModel model)
         {
             var query = from feedback in _context.Feedback
                         join user in _context.Users on feedback.UserId equals user.Id
+                        where feedback.Status == model.Status || model.Status == -1
                         orderby feedback.CreateDate descending
                         select new FeedbackDetailResult
                         {

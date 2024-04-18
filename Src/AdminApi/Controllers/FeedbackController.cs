@@ -32,7 +32,7 @@ namespace AdminApi.Controllers
         /// <returns>反馈列表</returns>
         [HttpGet]
         [ProducesResponseType(typeof(PageResult<FeedbackDetailResult>), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult> Get([FromQuery] PageModel model)
+        public async Task<ActionResult> Get([FromQuery] FeedbackModel model)
         {
             var data = await _feedbackQueries.GetFeedbackListAsync(model);
             return Ok(data);

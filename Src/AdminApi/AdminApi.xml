@@ -89,6 +89,11 @@
             年级
             </summary>
         </member>
+        <member name="P:AdminApi.Application.OrdersModel.Status">
+            <summary>
+            订单状态，-1 表示查询所有状态的订单
+            </summary>
+        </member>
         <member name="P:AdminApi.Application.ScenicSpotModel.KeyWord">
             <summary>
             关键字
@@ -101,7 +106,7 @@
             <param name="model">分页模型</param>
             <returns>反馈列表</returns>
         </member>
-        <member name="M:AdminApi.Application.Queries.OrderQueries.GetOrdersListAsync(AdminApi.Application.PageModel)">
+        <member name="M:AdminApi.Application.Queries.OrderQueries.GetOrdersListAsync(AdminApi.Application.OrdersModel)">
             <summary>
             查询订单列表，包含用户和景点信息
             </summary>
@@ -146,7 +151,7 @@
             <param name="command">更新订单状态命令</param>
             <returns></returns>
         </member>
-        <member name="M:AdminApi.Controllers.OrdersController.Get(AdminApi.Application.PageModel)">
+        <member name="M:AdminApi.Controllers.OrdersController.Get(AdminApi.Application.OrdersModel)">
             <summary>
             查询订单列表
             </summary>

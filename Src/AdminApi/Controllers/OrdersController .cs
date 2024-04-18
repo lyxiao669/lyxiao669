@@ -50,7 +50,7 @@ namespace AdminApi.Controllers
         /// <returns>订单列表</returns>
         [HttpGet]
         [ProducesResponseType(typeof(PageResult<Order>), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult> Get([FromQuery] PageModel model)
+        public async Task<ActionResult> Get([FromQuery] OrdersModel  model)
         {
             var data = await _orderQueries.GetOrdersListAsync(model);
             return Ok(data);

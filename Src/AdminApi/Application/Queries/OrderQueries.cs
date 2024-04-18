@@ -22,11 +22,13 @@ namespace AdminApi.Application.Queries
         /// </summary>
         /// <param name="model">分页模型</param>
         /// <returns>包含用户和景点信息的订单列表</returns>
-        public async Task<PageResult<OrderDetailResult>> GetOrdersListAsync(PageModel model)
+        public async Task<PageResult<OrderDetailResult>> GetOrdersListAsync(OrdersModel model)
         {
             var query = from order in _context.Order
                         join user in _context.Users on order.UserId equals user.Id
                         join spot in _context.ScenicSpots on order.SpotId equals spot.Id
+                        where order.Status == model.Status || model.Status == -1
+                        orderby order.OrderDate descending
                         select new OrderDetailResult
                         {
                             Id = order.Id,
