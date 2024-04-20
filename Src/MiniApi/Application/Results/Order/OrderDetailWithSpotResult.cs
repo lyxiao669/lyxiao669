@@ -17,7 +17,7 @@ namespace MiniApi.Application
     public string Avatar { get; set; }
 
     // 景区信息
-    public int spotId { get; set; }
+    public int SpotId { get; set; }
     public string SpotName { get; set; }
     public string ProvinceName { get; set; }
     public string CityName { get; set; }

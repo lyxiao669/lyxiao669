@@ -21,7 +21,7 @@ namespace MiniApi.Application
     }
 
     /// <summary>
-    /// 根据用户查询订单
+    /// 根据用户查询订单，返回结果按订单时间降序排列
     /// </summary>
     /// <param name="status">订单状态，当为null、空或-1时返回所有状态的订单</param>
     /// <returns>订单列表</returns>
@@ -37,11 +37,15 @@ namespace MiniApi.Application
       }
 
       // 根据状态过滤订单，如果状态为null、空或-1，则返回所有订单
-      IQueryable<Order> ordersQuery = _context.Order.Where(o => o.UserId == userId);
+      IQueryable<Order> ordersQuery = _context.Order
+                                            .Where(o => o.UserId == userId);
       if (status.HasValue && status.Value >= 0)
       {
         ordersQuery = ordersQuery.Where(o => o.Status == status.Value);
       }
+
+      // 根据时间降序排序
+      ordersQuery = ordersQuery.OrderByDescending(o => o.OrderDate);
 
       var orders = await ordersQuery.ToListAsync();
 
@@ -53,7 +57,7 @@ namespace MiniApi.Application
         {
           var orderDetail = new OrderDetailWithSpotResult
           {
-            spotId = order.SpotId,
+            SpotId = order.SpotId,
             OrderId = order.Id,
             OrderDate = order.OrderDate,
             Status = order.Status,
@@ -79,8 +83,5 @@ namespace MiniApi.Application
 
       return orderDetailsList;
     }
-
-
-
   }
 }

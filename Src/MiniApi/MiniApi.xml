@@ -47,7 +47,7 @@
         </member>
         <member name="M:MiniApi.Application.OrderQueries.GetOrderDetailsByUserIdAsync(System.Nullable{System.Int32})">
             <summary>
-            根据用户查询订单
+            根据用户查询订单，返回结果按订单时间降序排列
             </summary>
             <param name="status">订单状态，当为null、空或-1时返回所有状态的订单</param>
             <returns>订单列表</returns>

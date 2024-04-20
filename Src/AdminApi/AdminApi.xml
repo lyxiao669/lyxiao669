@@ -69,6 +69,11 @@
             性别
             </summary>
         </member>
+        <member name="P:AdminApi.Application.FeedbackModel.Status">
+            <summary>
+            订单状态，-1 表示查询所有
+            </summary>
+        </member>
         <member name="P:AdminApi.Application.IdentityUserModel.FullName">
             <summary>
             姓名
@@ -99,7 +104,7 @@
             关键字
             </summary>
         </member>
-        <member name="M:AdminApi.Application.Queries.FeedbackQueries.GetFeedbackListAsync(AdminApi.Application.PageModel)">
+        <member name="M:AdminApi.Application.Queries.FeedbackQueries.GetFeedbackListAsync(AdminApi.Application.FeedbackModel)">
             <summary>
             查询反馈列表，按创建时间降序
             </summary>
@@ -118,7 +123,7 @@
             反馈控制器
             </summary>
         </member>
-        <member name="M:AdminApi.Controllers.FeedbackController.Get(AdminApi.Application.PageModel)">
+        <member name="M:AdminApi.Controllers.FeedbackController.Get(AdminApi.Application.FeedbackModel)">
             <summary>
             查询反馈列表
             </summary>
